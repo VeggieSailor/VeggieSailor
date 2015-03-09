@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/static">
+        <file>images/barcelona.jpg</file>
+        <file>images/copenhagen.jpg</file>
+        <file>images/berlin.jpg</file>
+        <file>images/london.jpg</file>
+    </qresource>
+</RCC>
