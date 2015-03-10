@@ -35,6 +35,8 @@ OTHER_FILES += qml/VegSailor.qml \
     qml/pages/City.qml \
     qml/pages/Browse.qml \
     qml/pages/veggiesailor.py \
+    qml/pages/veganguide.py \
+    qml/pages/veggiesailor.py \
     qml/pages/veganguide.py
 
 # to disable building translations every time, comment out the
