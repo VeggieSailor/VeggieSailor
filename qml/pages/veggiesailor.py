@@ -30,7 +30,8 @@ def init_config_dir():
         os.makedirs(CONFIG)
 
 def purge_all_cache():
-    """Purges all caches"""
+    """Purges all caches
+    ."""
     shutil.rmtree(CACHE)
 
 
@@ -40,6 +41,8 @@ class Cache(object):
         self.cache_filename = os.path.join(CACHE, '%s.cache' % (cache_key))
 
     def put(self, json_str):
+        """Puts data in the cache file.
+        """
         fd = open(self.cache_filename, 'w')
         fd.write(json_str)
         fd.close()
