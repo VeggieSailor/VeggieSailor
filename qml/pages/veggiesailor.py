@@ -6,8 +6,8 @@ import shutil
 
 APPNAME = 'veggiesailor'
 HOME = os.environ['HOME']
-CONFIG = os.path.join(HOME, '.config', '.%s' % APPNAME)
-DATA =  os.path.join(HOME, APPNAME)
+CONFIG = os.path.join(HOME, '.config', '%s' % APPNAME)
+DATA =  os.path.join(HOME, '.%s' % APPNAME)
 CACHE =  os.path.join(DATA, 'cache')
 
 ### Logging
