@@ -12,8 +12,8 @@ Name:       VegSailor
 %{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
-Summary:    Veggie Sailer
-Version:    0.2
+Summary:    Veggie Sailor
+Version:    0.3
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE

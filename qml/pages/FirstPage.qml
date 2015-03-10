@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.3
 
 Page {
     id: page
@@ -7,6 +8,11 @@ Page {
         anchors.fill: parent
 
         PullDownMenu {
+            MenuItem {
+                text: qsTr("Clear cache")
+                onClicked: {
+                    py.call('veggiesailor.purge_all_cache',  [], function(result) {});
+                }            }
             MenuItem {
                 text: qsTr("Credits")
                 onClicked: pageStack.push(Qt.resolvedUrl("Credits.qml"))
@@ -16,7 +22,13 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("Browse.qml"))
             }
         }
-
+        Python {
+            id: py
+            Component.onCompleted: {
+                addImportPath(Qt.resolvedUrl('.'));
+                importModule('veggiesailor', function() {});
+            }
+        }
         contentHeight: column.height
 
         Column {

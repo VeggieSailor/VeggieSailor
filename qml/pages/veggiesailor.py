@@ -32,7 +32,10 @@ def init_config_dir():
 def purge_all_cache():
     """Purges all caches
     ."""
-    shutil.rmtree(CACHE)
+    try:
+        shutil.rmtree(CACHE)
+    except FileNotFoundError:
+        init_cache_dir()
 
 
 class Cache(object):

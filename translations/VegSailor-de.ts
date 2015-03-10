@@ -57,6 +57,10 @@
         <source>Powered by VegGuide.org</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Clear cache</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlaceInfo</name>
