@@ -16,8 +16,8 @@ Summary:    Veggie Sailor
 Version:    0.3
 Release:    1
 Group:      Qt/Qt
-License:    LICENSE
-URL:        http://example.org/
+License:    zlib
+URL:        https://veggiesailor.com/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  VegSailor.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
