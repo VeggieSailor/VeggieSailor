@@ -27,17 +27,19 @@ Page {
                     anchors.fill: parent
                     onClicked: pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                                               {
-                                                  "name":name,
-                                                  "address1":address1,
-                                                  "address2":address2,
-                                                  "city":city,
-                                                  "country":country,
-                                                  "veg_level_description":veg_level_description,
-                                                  "price_range":price_range,
-                                                  "long_description":long_description,
-                                                  "short_description":short_description,
+                                                  "name":typeof name != 'undefined' ? name : '',
+                                                  "address1":typeof address1 != 'undefined' ? address1 : '',
+                                                  "address2":typeof address2 != 'undefined' ? address2 : '',
+                                                  "city":typeof city != 'undefined' ? city : '',
+                                                  "country":typeof country != 'undefined' ? country : '',
+                                                  "veg_level_description":typeof veg_level_description != 'undefined' ? veg_level_description : '',
+                                                  "price_range":typeof price_range != 'undefined' ? price_range : '',
+                                                  "long_description":typeof long_description != 'undefined' ? long_description : '',
+                                                  "short_description":typeof short_description != 'undefined' ? short_description : '',
                                               })
                 }
+
+
             }
         }
         Python {
