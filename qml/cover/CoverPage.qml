@@ -37,22 +37,22 @@ CoverBackground {
         text: qsTr("Veggie Sailor")
         icon.source: "VegSailor.png"
         height: parent.height
-
     }
 
+    CoverActionList {
 
-
-    /*CoverActionList {
         id: coverAction
-
         CoverAction {
             iconSource: "image://theme/icon-cover-next"
+            onTriggered: {
+             pageStack.push(Qt.resolvedUrl("Browse.qml"))
+           }
         }
 
-        CoverAction {
-            iconSource: "image://theme/icon-cover-pause"
-        }
-    } */
+//        CoverAction {
+//            iconSource: "image://theme/icon-cover-pause"
+//        }
+    }
 }
 
 

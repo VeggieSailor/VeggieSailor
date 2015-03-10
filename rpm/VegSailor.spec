@@ -13,7 +13,7 @@ Name:       VegSailor
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Veggie Sailor
-Version:    0.3
+Version:    0.4
 Release:    1
 Group:      Qt/Qt
 License:    zlib
@@ -30,7 +30,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Short description of my SailfishOS Application
+Vegetarian / Vegan "sailing" guide.
 
 
 %prep
