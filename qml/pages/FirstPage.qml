@@ -63,7 +63,7 @@ Page {
                     width: page.width
                     Label {
                         text: qsTr(mytext)
-                        color: Theme.secondaryHighlightColor
+                        color: Theme.primaryColor
                         x: Theme.paddingLarge
                         MouseArea {
                             anchors.fill: parent

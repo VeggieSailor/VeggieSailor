@@ -84,7 +84,7 @@ Page {
                     py.call('listmodel.get_vegguide_children', [page.call_uri], function(result) {
                         for (var i=0; i<result.length; i++) {
                             listModel.append(result[i]);
-
+                            console.log(JSON.stringify(result[i]));
 
                         }
                     });

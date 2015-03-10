@@ -36,6 +36,8 @@ CoverBackground {
     CoverPlaceholder {
         text: qsTr("Veggie Sailor")
         icon.source: "VegSailor.png"
+        height: parent.height
+
     }
 
 
