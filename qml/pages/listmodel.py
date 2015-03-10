@@ -6,7 +6,12 @@ import veggiesailor
 import json
 
 def check_has_regions(seq):
-    """Updates list with missing values"""
+    """Updates list with missing values.
+
+    Parameters
+    ----------
+    seq : list
+    """
     for j in range(len(seq)):
         seq[j]['has_entries'] = 0
         if int(seq[j]['entry_count']) != 0 and int(seq[j]['is_country']) != 1:
@@ -15,7 +20,12 @@ def check_has_regions(seq):
 
 
 class VegGuideCache(object):
-    """Cache wrapper for VegGuideObject"""
+    """Cache wrapper for VegGuideObject
+
+    Parameters
+    ----------
+    uri : str
+    obj_type :  VegGuideObject or VegGuideObjectEntries"""
     def __init__(self, uri, obj_type):
         self.cache = veggiesailor.CacheHttp(uri)
 
@@ -34,7 +44,12 @@ class VegGuideCache(object):
             self.cache.put(json.dumps(provider.results))
 
 class VegGuideObjectCache(vegguide.VegGuideObject):
-    """Cache wrapper for VegGuideObject"""
+    """Cache wrapper for VegGuideObject.
+
+    Parameters
+    ----------
+    uri : str"""
+
     def __init__(self, uri):
         self.cache = veggiesailor.CacheHttp(uri)
         results = self.cache.get()
@@ -50,7 +65,12 @@ class VegGuideObjectCache(vegguide.VegGuideObject):
             self.cache.put(json.dumps(self.results))
 
 class VegGuideObjectEntriesCache(vegguide.VegGuideObjectEntries):
-    """Cache wrapper for VegGuideObjectEntries"""
+    """Cache wrapper for VegGuideObjectEntries.
+    Parameters
+    ----------
+    uri : str
+    """
+
     def __init__(self, uri):
         self.cache = veggiesailor.CacheHttp(uri)
         results = self.cache.get()
@@ -81,9 +101,11 @@ def get_vegguide_children(uri):
     return check_has_regions(result)
 
 def get_entries(uri):
-    """
-    Gets entries after providing url
+    """Gets entries after providing url.
 
+    Parameters
+    ----------
+    uri : str
 
     """
     results = VegGuideObjectEntriesCache(uri).results

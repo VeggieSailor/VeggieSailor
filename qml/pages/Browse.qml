@@ -72,7 +72,6 @@ Page {
                 property string myEntries_uri: entries_uri
                 sourceComponent: has_entries == 0 ? regionComponent : entryComponent
             }
-
         }
     }
     Python {
@@ -84,7 +83,6 @@ Page {
                     py.call('listmodel.get_vegguide_children', [page.call_uri], function(result) {
                         for (var i=0; i<result.length; i++) {
                             listModel.append(result[i]);
-                            console.log(JSON.stringify(result[i]));
 
                         }
                     });
