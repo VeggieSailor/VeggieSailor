@@ -85,9 +85,6 @@ class VegGuideObjectEntriesCache(vegguide.VegGuideObjectEntries):
             super().__init__(uri)
             self.cache.put(json.dumps(self.results))
 
-
-
-
 def get_vegguide_regions(hierarchy, uri):
     # root = vegguide.VegGuideObject(uri)
     root = VegGuideObjectCache(uri)
@@ -112,4 +109,18 @@ def get_entries(uri):
     for i in range(0, len(results)):
         if 'address2' not in results[i]:
             results[i]['address2'] = ''
+        results[i]['hours_txt'] = ''
+        if 'hours' in results[i]:
+            strhours = []
+            for elem in results[i]['hours']:
+                #from ipdb import set_trace; set_trace()
+                strhours.append(elem['days']+' '+(' , '.join(elem['hours'])))
+            results[i]['hours_txt'] = ('\n').join(strhours)
+
+        results[i]['cuisines_txt'] = ', '.join(results[i]['cuisines'])
+
     return results
+
+if __name__ == "__main__":
+    c = get_entries('http://www.vegguide.org/region/583')
+    print (c)

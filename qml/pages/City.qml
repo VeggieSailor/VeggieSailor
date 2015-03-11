@@ -50,6 +50,8 @@ Page {
                                               "price_range":typeof price_range != 'undefined' ? price_range : '',
                                               "long_description":typeof long_description != 'undefined' ? long_description : '',
                                               "short_description":typeof short_description != 'undefined' ? short_description : '',
+                                              "hours_txt": typeof hours_txt != 'undefined' ? hours_txt : '',
+                                              "cuisines_txt": typeof cuisines_txt != 'undefined' ? cuisines_txt : '',
                                           })
             }
         }

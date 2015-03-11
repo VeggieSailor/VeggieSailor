@@ -15,12 +15,14 @@ Page {
     property string short_description
 
     property variant cousines
+    property variant cuisines_txt
 
 
     property variant images
 
 
     property string address
+    property string hours_txt
 
     address: address1 + " " + address2 + " " + city + " " + country
 
@@ -50,6 +52,15 @@ Page {
             DetailItem {
                 label: qsTr('Price Range')
                 value: qsTr(page.price_range)
+            }
+
+            DetailItem {
+                label: qsTr('Hours')
+                value: qsTr(page.hours_txt)
+            }
+            DetailItem {
+                label: qsTr('Cuisines')
+                value: qsTr(page.cuisines_txt)
             }
 
           }
