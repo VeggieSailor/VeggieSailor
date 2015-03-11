@@ -29,83 +29,46 @@ Page {
             title: qsTr(page.header)
         }
 
-
-
-
-        delegate: delegate
-
-        Component {
-            id: regionComponent
-            BackgroundItem {
-                height: Theme.itemSizeSmall
+        delegate: BackgroundItem {
+            height: Theme.itemSizeSmall
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            Label {
                 anchors {
                     left: parent.left
+                    leftMargin: Theme.paddingLarge
                     right: parent.right
+                    rightMargin: Theme.paddingSmall
+                    verticalCenter: parent.verticalCenter
                 }
-                Label {
-                    anchors {
-                        left: parent.left
-                        leftMargin: Theme.paddingLarge
-                        right: parent.right
-                        rightMargin: Theme.paddingSmall
-                        verticalCenter: parent.verticalCenter
-                    }
-                    text: myName
-                    color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                text: name
+                color: highlighted ? Theme.highlightColor : Theme.primaryColor
 
-                }
-                onClicked: pageStack.push(Qt.resolvedUrl("Browse.qml"),
-                                          {
-                                              "name":myName,
-                                              "mytext": myName,
-                                              "entries_uri": myEntries_uri,
-                                              "uri": myUri
-                                          })
             }
-        }
-        Component {
-            id: entryComponent
-            BackgroundItem {
-                height: Theme.itemSizeSmall
-                anchors {
-                    left: parent.left
-                    right: parent.right
+            onClicked: {
+                if(isRegion()) {
+                    pageStack.push(Qt.resolvedUrl("Browse.qml"),
+                                    {
+                                        "name":name,
+                                        "mytext": name,
+                                        "entries_uri": entries_uri,
+                                        "uri": uri
+                                    });
+                } else {
+                    pageStack.push(Qt.resolvedUrl("City.qml"),
+                                    {
+                                        "uri": uri,
+                                        "mytext":name
+                                    });
                 }
-                Label {
-                    anchors {
-                        left: parent.left
-                        leftMargin: Theme.paddingLarge
-                        right: parent.right
-                        rightMargin: Theme.paddingSmall
-                        verticalCenter: parent.verticalCenter
-                    }
-                    text: myName
-                    color: highlighted ? Theme.highlightColor : Theme.primaryColor
-                }
-                onClicked: pageStack.push(Qt.resolvedUrl("City.qml"),{"uri": myUri, "mytext":myName})
             }
 
-        }
-
-        Component {
-            id: delegate
-
-
-            Loader {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
-                property string myUri: uri
-                property string myName: name
-                property string myText: mytext
-                property string myEntries_uri: entries_uri
-                sourceComponent: has_entries == 0 ? regionComponent : entryComponent
+            function isRegion() {
+                 return has_entries == 0
             }
         }
-
-
-
 
     }
     BusyIndicator {
@@ -118,28 +81,21 @@ Page {
         id: py
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('.'));
-            if (page.uri) {
-                importModule('listmodel', function () {
-                    loadingData = true;
-                    py.call('listmodel.get_vegguide_children', [page.call_uri], function(result) {
-                        loadingData = false;
-                        for (var i=0; i<result.length; i++) {
-                            listModel.append(result[i]);
-                        }
-                    });
-                });
-            } else {
-                importModule('listmodel', function () {
-                    loadingData = true;
-                    py.call('listmodel.get_vegguide_regions', ['primary',page.call_uri], function(result) {
-                        loadingData = false;
-                        for (var i=0; i<result.length; i++) {
-                            listModel.append(result[i]);
-                        }
-                    });
-                });
+            loadingData = true;
+            importModule('listmodel', function () {
+                if (page.uri) {
+                    py.call('listmodel.get_vegguide_children', [page.call_uri], fillListModel);
+                } else {
+                    py.call('listmodel.get_vegguide_regions', ['primary',page.call_uri], fillListModel);
+                }
+            });
+        }
+
+        function fillListModel(data) {
+            for (var i=0; i<data.length; i++) {
+                listModel.append(data[i]);
             }
+            loadingData = false;
         }
     }
-
 }
