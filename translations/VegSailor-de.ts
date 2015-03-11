@@ -77,7 +77,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Favourites</source>
+        <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
