@@ -18,17 +18,18 @@ Page {
 
     property variant cousines
     property variant cuisines_txt
-
-    property variant images
-
-    property string address
     property string hours_txt
-
+    property string tags_txt
+    property variant images
+    property string address
     property int key_type: 1
-
 
     address: address1 + " " + address2 + " " + city + " " + country
     SilicaFlickable {
+        width: page.width
+        height: parent.width
+        contentHeight: column.height
+        contentWidth: column.width
         anchors.fill: parent
         PullDownMenu {
             MenuItem {
@@ -47,8 +48,6 @@ Page {
                             {
                                 favorite.text = "Add to favorites";
                             }
-
-
                         });
                     }
                 }
@@ -64,7 +63,6 @@ Page {
                         {
                             favorite.text = "Remove from favorites";
                         } else
-
                         {
                             favorite.text = "Add to favorites";
                         }
@@ -76,14 +74,10 @@ Page {
             id: column
             width: page.width
             spacing: Theme.paddingLarge
-
-
             PageHeader {
                 id: pageHeader
                 title: qsTr(name)
-
             }
-
             DetailItem {
                 label: qsTr('Veg Level')
                 value: qsTr(page.veg_level_description)
@@ -114,9 +108,10 @@ Page {
                 value: qsTr(page.cuisines_txt)
             }
             DetailItem {
-                label: qsTr('URI FUCK REMOVE ME')
-                value: qsTr(page.uri)
+                label: qsTr('Tags')
+                value: qsTr(page.tags_txt)
             }
+
 
         }
     }

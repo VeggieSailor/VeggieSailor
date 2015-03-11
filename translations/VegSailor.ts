@@ -88,7 +88,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI FUCK REMOVE ME</source>
+        <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

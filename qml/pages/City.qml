@@ -53,6 +53,8 @@ Page {
                                               "short_description":typeof short_description != 'undefined' ? short_description : '',
                                               "hours_txt": typeof hours_txt != 'undefined' ? hours_txt : '',
                                               "cuisines_txt": typeof cuisines_txt != 'undefined' ? cuisines_txt : '',
+                                              "tags_txt": typeof tags_txt != 'undefined' ? tags_txt : '',
+
                                           })
             }
         }

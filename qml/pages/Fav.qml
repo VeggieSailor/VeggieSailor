@@ -6,6 +6,23 @@ Page {
     id: page
 
 
+
+
+    onStatusChanged: {
+
+
+        if (page.status==PageStatus.Active)
+        {
+            placesModel.clear();
+
+    py.call('listmodel.fav_places', [],function(result) {
+        for (var i=0; i<result.length; i++) {
+            placesModel.append(result[i]);
+        }
+    });
+        }
+
+    }
     SilicaFlickable {
         width: page.width
         height: parent.width
@@ -41,13 +58,41 @@ Page {
                     delegate: BackgroundItem {
                         id: bgdPlace
                         height: Theme.itemSizeSmall
+                        function openPlace(entryUri) {
+                            console.log('Opening:'+entryUri);
 
+                            py.call('listmodel.get_vegguide_entry', [entryUri],function(result) {
+
+                                console.log(JSON.stringify(result));
+                                pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
+                              {
+                                  "uri":result['uri'],
+                                  "name": result['name'] ,
+                                  "address1": result['address1'],
+                                  "address2": result['address2'],
+                                  "city": result['city'],
+                                  "country":result['country'],
+                                  "veg_level_description": result['veg_level_description'],
+                                  "price_range": result['price_range'],
+                                  "long_description": result['long_description'],
+                                  "short_description": result['short_description'],
+                                  "hours_txt": result['hours_txt'],
+                                  "cuisines_txt": result['cuisines_txt'],
+                                  "tags_txt": result['tags_txt']
+
+                              });
+//                                for (var i=0; i<result.length; i++) {
+//                                    placesModel.append(result[i]);
+//                                }
+                            });
+
+                        }
                         Label {
                             text: name
                             x: Theme.paddingLarge
                             color: bgdPlace.highlighted ? Theme.highlightColor : Theme.primaryColor
                         }
-                        // onClicked: openPlace(index)
+                        onClicked: openPlace(uri)
 
                     }
                 }
@@ -89,13 +134,17 @@ Page {
                     Component.onCompleted: {
                         addImportPath(Qt.resolvedUrl('.'));
                         importModule('listmodel', function(result) {
-                            py.call('listmodel.fav_places', [],function(result) {
-                                for (var i=0; i<result.length; i++) {
-                                    placesModel.append(result[i]);
-                                }
-                            });
+                            placesModel.clear();
+
+//                            py.call('listmodel.fav_places', [],function(result) {
+//                                for (var i=0; i<result.length; i++) {
+//                                    placesModel.append(result[i]);
+//                                }
+//                            });
                         });
                     }
+
+
                 }
 
             }
