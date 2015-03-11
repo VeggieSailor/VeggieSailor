@@ -13,6 +13,8 @@ import shutil
 import sqlite3
 import json
 
+VERSION_STAMP = 1
+
 APP_NAME = 'veggiesailor'
 HARBOUR_APP_NAME = APP_NAME
 
@@ -61,6 +63,23 @@ def init_config_dir():
     """
     if not os.path.exists(CONFIG):
         os.makedirs(CONFIG)
+
+def check_version_stamp(stamp=1):
+    """Simply versioning.
+
+    Notes
+    -----
+    Needs to be seriously improved."
+    """
+
+    init_config_dir()
+    if not os.path.exists(os.path.join(CONFIG,'timestamp_00')):
+        fd = open(os.path.join(CONFIG,'timestamp_00'),'w')
+        fd.write(str(VERSION_STAMP))
+        fd.close()
+        return False
+    return True
+
 
 def purge_all_cache():
     """Purge all caches
@@ -138,6 +157,9 @@ class StorageFav(Storage):
     def __init__(self, name='storage'):
         super().__init__(name)
         self.create_table()
+
+        if not check_version_stamp():
+            self.truncate()
 
 
     def create_table(self):

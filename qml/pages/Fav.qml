@@ -59,11 +59,11 @@ Page {
                         id: bgdPlace
                         height: Theme.itemSizeSmall
                         function openPlace(entryUri) {
-                            console.log('Opening:'+entryUri);
+
 
                             py.call('listmodel.get_vegguide_entry', [entryUri],function(result) {
 
-                                console.log(JSON.stringify(result));
+
                                 pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                               {
                                   "uri":result['uri'],
@@ -87,15 +87,43 @@ Page {
                             });
 
                         }
-                        Label {
-                            text: name
-                            x: Theme.paddingLarge
-                            color: bgdPlace.highlighted ? Theme.highlightColor : Theme.primaryColor
+                        Rectangle {
+                            width: Theme.paddingSmall
+                            radius: Math.round(height/3)
+                            color: color_txt
+                            anchors {
+                                top: parent.top
+                                bottom: parent.bottom
+                                left: parent.left
+                                topMargin: Theme.paddingSmall/2
+                                bottomMargin: Theme.paddingSmall/2
+                                leftMargin: -width/2
+                            }
                         }
+                        Column {
+                            anchors {
+                                left: parent.left
+                                leftMargin: Theme.paddingLarge
+                                right: parent.right
+                                rightMargin: Theme.paddingSmall
+                                verticalCenter: parent.verticalCenter
+                            }
+                            Label {
+                                text: name
+                                color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                            }
+                            Label {
+                                text: veg_level_description
+                                color: highlighted ? Theme.highlightColor : Theme.secondaryColor
+                                font.pixelSize: Theme.fontSizeSmall
+                            }
+                        }
+
                         onClicked: openPlace(uri)
 
                     }
                 }
+                /* // Commented since model does not work yet
                 Label {
                     text: qsTr("Cities")
                     color: Theme.highlightColor
@@ -129,6 +157,7 @@ Page {
 
                     }
                 }
+                */
                 Python {
                     id: py
                     Component.onCompleted: {

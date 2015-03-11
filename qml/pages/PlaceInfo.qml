@@ -20,6 +20,7 @@ Page {
     property variant cuisines_txt
     property string hours_txt
     property string tags_txt
+    property string color_txt
     property variant images
     property string address
     property int key_type: 1
@@ -39,7 +40,7 @@ Page {
                 onClicked:
                 {
                     onClicked: {
-                        py.call('listmodel.fav_place', [page.uri, {'name':page.name, 'city':page.city, 'uri':page.uri}],function(result) {
+                        py.call('listmodel.fav_place', [page.uri, {'name':page.name, 'city':page.city, 'color_txt':page.color_txt, 'uri':page.uri,'veg_level_description':page.veg_level_description}],function(result) {
                             if (result==1)
                             {
                                 favorite.text = "Remove from favorites";

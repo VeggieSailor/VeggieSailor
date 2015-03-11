@@ -30,10 +30,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cities</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Places</source>
         <translation type="unfinished"></translation>
     </message>
