@@ -24,7 +24,7 @@ Page {
             title: qsTr(page.mytext)
         }
         delegate: BackgroundItem {
-            height: Theme.itemSizeSmall
+            height: Theme.itemSizeMedium
             anchors {
                 left: parent.left
                 right: parent.right
@@ -44,18 +44,25 @@ Page {
                     leftMargin: -width/2
                 }
             }
-            Label {
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.paddingLarge
-                    right: parent.right
-                    rightMargin: Theme.paddingSmall
-                    verticalCenter: parent.verticalCenter
+			Column {
+				anchors {
+					left: parent.left
+					leftMargin: Theme.paddingLarge
+					right: parent.right
+					rightMargin: Theme.paddingSmall
+					verticalCenter: parent.verticalCenter
+				}
+				Label {
+					text: name
+					color: highlighted ? Theme.highlightColor : Theme.primaryColor
+				}
+				Label {
+					text: veg_level_description
+					color: highlighted ? Theme.highlightColor : Theme.secondaryColor
+					font.pixelSize: Theme.fontSizeSmall
+				}
+			}
 
-                }
-                text: name
-                color: highlighted ? Theme.highlightColor : Theme.primaryColor
-            }
             onClicked: pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                                       {
                                           "uri":uri,
