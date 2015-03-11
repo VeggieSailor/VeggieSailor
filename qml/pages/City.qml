@@ -22,12 +22,12 @@ Page {
                 title: qsTr(page.mytext)
             }
             delegate: BackgroundItem {
-                height: Theme.itemSizeSmall
+                height: Theme.itemSizeMedium
                 anchors {
                     left: parent.left
                     right: parent.right
                 }
-                Label {
+                Column {
                     anchors {
                         left: parent.left
                         leftMargin: Theme.paddingLarge
@@ -36,9 +36,19 @@ Page {
                         verticalCenter: parent.verticalCenter
 
                     }
-                    text: name
-                    color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                    Label {
+
+                        text: name
+                        color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                    }
+                    Label {
+                        text: veg_level_description
+                        color: highlighted ? Theme.highlightColor : Theme.secondaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
                 }
+
+
                 onClicked: pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                                           {
                                               "uri":uri,
@@ -71,6 +81,7 @@ Page {
                     py.call('listmodel.get_entries', [page.uri], function(result) {
                         for (var i=0; i<result.length; i++) {
                             listModel.append(result[i]);
+                            console.log(JSON.stringify(result[i]));
                         }
                         loadingData = false;
                     });
