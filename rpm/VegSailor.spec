@@ -13,7 +13,7 @@ Name:       VegSailor
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Veggie Sailor
-Version:    0.4.1
+Version:    0.4.4
 Release:    1
 Group:      Qt/Qt
 License:    zlib
