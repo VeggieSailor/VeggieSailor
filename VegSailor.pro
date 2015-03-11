@@ -37,7 +37,8 @@ OTHER_FILES += qml/VegSailor.qml \
     qml/pages/veganguide.py \
     qml/pages/veggiesailor.py \
     qml/pages/veganguide.py \
-    rpm/VegSailor.changes.in
+    rpm/VegSailor.changes.in \
+    qml/pages/Fav.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

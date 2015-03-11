@@ -30,6 +30,8 @@ Page {
         }
 
 
+
+
         delegate: delegate
 
         Component {
@@ -123,7 +125,6 @@ Page {
                         loadingData = false;
                         for (var i=0; i<result.length; i++) {
                             listModel.append(result[i]);
-
                         }
                     });
                 });
@@ -134,7 +135,6 @@ Page {
                         loadingData = false;
                         for (var i=0; i<result.length; i++) {
                             listModel.append(result[i]);
-
                         }
                     });
                 });

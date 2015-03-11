@@ -21,6 +21,10 @@ Page {
                 text: qsTr("Sail")
                 onClicked: pageStack.push(Qt.resolvedUrl("Browse.qml"))
             }
+            MenuItem {
+                text: qsTr("Favourites")
+                onClicked: pageStack.push(Qt.resolvedUrl("Fav.qml"))
+            }
         }
         Python {
             id: py

@@ -1,8 +1,10 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.3
 
 Page {
     id: page
+    property string uri
     property string name
     property string address1
     property string address2
@@ -17,21 +19,69 @@ Page {
     property variant cousines
     property variant cuisines_txt
 
-
     property variant images
-
 
     property string address
     property string hours_txt
 
-    address: address1 + " " + address2 + " " + city + " " + country
+    property int key_type: 1
 
+
+    address: address1 + " " + address2 + " " + city + " " + country
+    SilicaFlickable {
+        anchors.fill: parent
+        PullDownMenu {
+            MenuItem {
+                id: favorite
+                text: qsTr("Add to favorites")
+
+                onClicked:
+                {
+                    onClicked: {
+                        py.call('listmodel.fav_place', [page.uri, {'name':page.name, 'city':page.city, 'uri':page.uri}],function(result) {
+                            if (result==1)
+                            {
+                                favorite.text = "Remove from favorites";
+                            } else
+
+                            {
+                                favorite.text = "Add to favorites";
+                            }
+
+
+                        });
+                    }
+                }
+            }
+        }
+        Python {
+            id: py
+            Component.onCompleted: {
+                addImportPath(Qt.resolvedUrl('.'));
+                importModule('listmodel', function() {
+                    py.call('listmodel.fav_place_check', [page.uri],function(result) {
+                        if (result==1)
+                        {
+                            favorite.text = "Remove from favorites";
+                        } else
+
+                        {
+                            favorite.text = "Add to favorites";
+                        }
+                    });
+                });
+            }
+        }
         Column {
             id: column
             width: page.width
             spacing: Theme.paddingLarge
+
+
             PageHeader {
+                id: pageHeader
                 title: qsTr(name)
+
             }
 
             DetailItem {
@@ -57,11 +107,17 @@ Page {
             DetailItem {
                 label: qsTr('Hours')
                 value: qsTr(page.hours_txt)
+
             }
             DetailItem {
                 label: qsTr('Cuisines')
                 value: qsTr(page.cuisines_txt)
             }
+            DetailItem {
+                label: qsTr('URI FUCK REMOVE ME')
+                value: qsTr(page.uri)
+            }
 
-          }
+        }
+    }
 }

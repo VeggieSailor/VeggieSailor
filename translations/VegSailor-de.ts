@@ -24,6 +24,21 @@
     </message>
 </context>
 <context>
+    <name>Fav</name>
+    <message>
+        <source>Favourites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Places</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Show Page 2</source>
@@ -61,9 +76,25 @@
         <source>Clear cache</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Favourites</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlaceInfo</name>
+    <message>
+        <source>Add to favorites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Veg Level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Description</source>
         <translation type="unfinished"></translation>
@@ -73,19 +104,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Veg Level</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cuisines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>URI FUCK REMOVE ME</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

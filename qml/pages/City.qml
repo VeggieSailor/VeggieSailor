@@ -41,6 +41,7 @@ Page {
                 }
                 onClicked: pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                                           {
+                                              "uri":uri,
                                               "name":typeof name != 'undefined' ? name : '',
                                               "address1":typeof address1 != 'undefined' ? address1 : '',
                                               "address2":typeof address2 != 'undefined' ? address2 : '',

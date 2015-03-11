@@ -121,6 +121,36 @@ def get_entries(uri):
 
     return results
 
+def fav_place(uri, data={}):
+    """Switch favorite status of the place.
+    """
+    sv = veggiesailor.StorageFav()
+    return sv.switch(uri, 1, data)
+
+def fav_place_check(uri):
+    """Check is place is favorite.
+    """
+    return veggiesailor.StorageFav().exists(uri)
+
+def fav_city(uridata={}):
+    """Switch favorite status of the city.
+    """
+    sv = veggiesailor.StorageFav()
+    return sv.switch(uri, 0, data)
+
+def fav_places():
+    """Get favorite places.
+    """
+    sv = veggiesailor.StorageFav()
+    results = sv.get_favorites()
+    return results
+
+
 if __name__ == "__main__":
     c = get_entries('http://www.vegguide.org/region/583')
+
+    #p = get_place('http://www.vegguide.org/entry/12300')
+
+    from ipdb import set_trace; set_trace()
+
     print (c)
