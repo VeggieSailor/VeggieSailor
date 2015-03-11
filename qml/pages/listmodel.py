@@ -133,16 +133,17 @@ def adjust_entry(entry):
     if int(entry['veg_level']) == 0:
          entry['color_txt'] = '#fab20a'
     elif int(entry['veg_level']) == 1:
-        entry['color_txt'] = '#155196'
-    elif int(entry['veg_level']) == 2:
         entry['color_txt'] = '#97a509'
+    elif int(entry['veg_level']) == 2:
+        entry['color_txt'] = '#155196'
     elif int(entry['veg_level']) == 3:
         entry['color_txt'] = '#e55e16'
     elif int(entry['veg_level']) == 4:
         entry['color_txt'] = '#b00257'
-    elif entry['veg_level'] == 5:
+    elif int(entry['veg_level']) == 5:
         entry['color_txt'] = '#16ac48'
     return entry
+    #97a509 155196 fab20a  e55e16
 
 def get_vegguide_entry(uri):
     """Get cached entry.

@@ -16,7 +16,8 @@ Page {
             width: page.width
 
         model: ListModel {
-            ListElement { mytext: "Coding"; myvalue: "Rafał bluszcz Zawadzki"; mysize: "Theme.fontSizeExtraLarge" }
+            ListElement { mytext: "Author, Coding"; myvalue: "Rafał bluszcz Zawadzki"; mysize: "Theme.fontSizeExtraLarge" }
+            ListElement { mytext: "Fixes, Ideas, Coding"; myvalue: "Florian Wittmann"; mysize: "Theme.fontSizeExtraLarge" }
             ListElement { mytext: "Copenhagen photo"; myvalue: "Nelson L. https://creativecommons.org/licenses/by/2.0/"; mysize: "Theme.fontSizeExtraLarge" }
             ListElement { mytext: "API Provide"; myvalue: "VegGuide http://www.vegguide.org"; mysize: "Theme.fontSizeExtraLarge" }
         }
