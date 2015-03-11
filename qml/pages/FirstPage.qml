@@ -22,7 +22,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("Browse.qml"))
             }
             MenuItem {
-                text: qsTr("Favourites")
+                text: qsTr("Favorites")
                 onClicked: pageStack.push(Qt.resolvedUrl("Fav.qml"))
             }
         }
