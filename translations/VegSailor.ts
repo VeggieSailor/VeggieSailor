@@ -56,6 +56,14 @@
         <source>Veg Level</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Hours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cuisines</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SecondPage</name>
