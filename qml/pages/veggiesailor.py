@@ -18,6 +18,7 @@ HARBOUR_APP_NAME = APP_NAME
 
 HOME = os.environ['HOME']
 
+### Implementation of Hardbour requirements
 # https://harbour.jolla.com/faq#2.13.0
 XDG_DATA_HOME = os.environ.get('XDG_DATA_HOME') \
     if os.environ.get('XDG_DATA_HOME') \
@@ -124,9 +125,6 @@ class Storage(object):
         self.cursor = self.conn.cursor()
 
         self.conn.commit()
-
-
-
 
 FAV_TYPES = {
  0: 'city',
