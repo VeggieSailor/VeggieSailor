@@ -4,10 +4,6 @@ import io.thp.pyotherside 1.3
 
 Page {
     id: page
-
-
-
-
     onStatusChanged: {
 
 
@@ -59,11 +55,7 @@ Page {
                         id: bgdPlace
                         height: Theme.itemSizeSmall
                         function openPlace(entryUri) {
-
-
                             py.call('listmodel.get_vegguide_entry', [entryUri],function(result) {
-
-
                                 pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                               {
                                   "uri":result['uri'],
@@ -81,9 +73,6 @@ Page {
                                   "tags_txt": result['tags_txt']
 
                               });
-//                                for (var i=0; i<result.length; i++) {
-//                                    placesModel.append(result[i]);
-//                                }
                             });
 
                         }
@@ -164,12 +153,6 @@ Page {
                         addImportPath(Qt.resolvedUrl('.'));
                         importModule('listmodel', function(result) {
                             placesModel.clear();
-
-//                            py.call('listmodel.fav_places', [],function(result) {
-//                                for (var i=0; i<result.length; i++) {
-//                                    placesModel.append(result[i]);
-//                                }
-//                            });
                         });
                     }
 
