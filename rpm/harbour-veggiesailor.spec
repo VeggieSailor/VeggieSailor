@@ -19,7 +19,7 @@ Group:      Qt/Qt
 License:    zlib
 URL:        https://veggiesailor.com/
 Source0:    %{name}-%{version}.tar.bz2
-Source100:  VegSailor.yaml
+Source100:  harbour-veggiesailor.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5
 Requires:   libsailfishapp-launcher
