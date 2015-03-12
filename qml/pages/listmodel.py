@@ -18,7 +18,6 @@ def check_has_regions(seq):
             seq[j]['has_entries'] = 1
     return seq
 
-
 class VegGuideCache(object):
     """Cache wrapper for VegGuideObject
 
@@ -101,9 +100,17 @@ def get_vegguide_children(uri):
     Parameters
     ----------
     uri : str
+
+    Notes
+    -----
+    TODO: Due to this issues: https://github.com/bluszcz/VeggieSailor/issues/9
+    there must be performed extra check if we are not loosing any data.
     """
     children = VegGuideObjectCache(uri)
-    result = children.results['children']
+    try:
+        result = children.results['children']
+    except KeyError: # https://github.com/bluszcz/VeggieSailor/issues/9
+        result = []
     return check_has_regions(result)
 
 def adjust_entry(entry):
@@ -112,6 +119,18 @@ def adjust_entry(entry):
     Parameters
     ----------
     entry : dict
+
+    Notes
+    -----
+
+    Followed colors are being used:
+
+    #b00257 - very dark red
+    #e55e16 - red (bad one)
+    #155196 - dark blue
+    #fab20a - orange
+    #97a509 - greenish yellow
+    #16ac48 - light green
     """
     if 'address2' not in entry:
         entry['address2'] = ''
@@ -121,11 +140,13 @@ def adjust_entry(entry):
         for elem in entry['hours']:
             strhours.append(elem['days']+' '+(' , '.join(elem['hours'])))
         entry['hours_txt'] = ('\n').join(strhours)
+    else:
+        entry['hours'] = []
+    entry['hours_parsed'] = get_hours_dict(entry['hours'])
     entry['cuisines_txt'] = ', '.join(entry['cuisines'])
     if 'tags' not in entry:
         entry['tags'] = []
     entry['tags_txt'] = ', '.join(entry['tags'])
-
 
     if not 'veg_level' in entry:
         entry['veg_level'] = 5
@@ -144,18 +165,10 @@ def adjust_entry(entry):
         entry['color_txt'] = '#16ac48'
     return entry
 
-    #97a509 155196 fab20a  e55e16
-    #b00257 - very dark red
-    #e55e16 - red (bad one)
-    #155196 - dark blue
-    #fab20a - orange
-    #97a509 - shit green
-    #16ac48 - light green
-
 def get_vegguide_entry(uri):
     """Get cached entry.
 
-    Paramaters
+    Parameters
     ----------
     uri : str
     """
@@ -199,6 +212,102 @@ def fav_places():
     results = sv.get_favorites()
     return results
 
+
+def parse_hour(hour):
+    """Parse VegGuide hour.
+
+    Parameters
+    ----------
+    hour : str
+    """
+    hour = hour.strip()
+
+    if hour=='midnight':
+        return '2400'
+    elif hour=='noon':
+        return '1200'
+
+    if hour.find('am')!=-1:
+        hour = hour.replace('am','')
+        hour = hour.replace(':','')
+        hour = hour.strip()
+        if len(hour)<3:
+            hour = hour + "00"
+        return hour
+    elif hour.find('pm')!=-1:
+        hour = hour.replace('pm','')
+        opening = hour.split(':')
+        if len(opening)==2:
+            return ''.join([str(int(opening[0])+12),opening[1]])
+        else:
+            return str(int(opening[0])+12)+'00'
+
+days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+def parse_hours(hours):
+    """Parse VegGuide hours dictionary.
+
+    Parameters
+    ----------
+    hours : list of dicts
+    """
+    result = []
+    struct = {}
+    for hour in hours:
+        data = hour['days'].replace(' ','').split('-')
+        if len(data)==2:
+            new_data = days[days.index(data[0]):days.index(data[1])+1]
+        else:
+            new_data = data
+        if data[0] == 'Daily':
+            new_data = days
+        open_hours_tmp = hour['hours']
+        for day in new_data:
+            struct[day] = []
+            for elem in open_hours_tmp:
+                new_hours = []
+                for j in elem.split('-'):
+                    new_hours.append(parse_hour(j))
+                struct[day].append(new_hours)
+        for day in days:
+            if day not in struct:
+                struct[day]  = []
+        result.append(struct)
+    return struct
+
+def to_from(arr):
+    """Convert two elements list into dictionary 'to-from'.
+    """
+    try:
+        return {'from':arr[0], 'to':arr[1]}
+    except IndexError:
+        return None
+
+def modify_hours(hours):
+    """Modify all elements for hour structure.
+    """
+
+    result = []
+    for day in days:
+        subresult = []
+        try:
+            for opening in hours[day]:
+                subresult.append(to_from(opening))
+        except KeyError:
+            """No opening for this day.
+            """
+        result.append(subresult)
+    return result
+
+
+def get_hours_dict(hours_dicts_list):
+    """Get hours in 'to-from' format after providing VegGuide format.
+
+    Parameters
+    ----------
+    hours_dicts_list - list of dicts
+    """
+    return modify_hours(parse_hours(hours_dicts_list))
+
+
 if __name__ == "__main__":
-    c = get_entries('http://www.vegguide.org/region/583')
-    print (c)
+    bcn = get_entries('http://www.vegguide.org/region/583')
