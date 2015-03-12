@@ -15,7 +15,7 @@ import json
 
 VERSION_STAMP = 1
 
-APP_NAME = 'veggiesailor'
+APP_NAME = 'harbour-veggiesailor'
 HARBOUR_APP_NAME = APP_NAME
 
 HOME = os.environ['HOME']
