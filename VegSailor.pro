@@ -10,22 +10,19 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = VegSailor
+TARGET = harbour-veggiesailor
 
 CONFIG += sailfishapp
 
 SOURCES += src/VegSailor.cpp
 
-OTHER_FILES += qml/VegSailor.qml \
+OTHER_FILES += \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     qml/pages/SecondPage.qml \
     rpm/VegSailor.spec \
-    rpm/VegSailor.yaml \
     translations/*.ts \
-    VegSailor.desktop \
     qml/pages/listmodel.py \
-    VegSailor.png \
     qml/cover/VegSailor.png \
     qml/pages/images/barcelona.jpg \
     qml/pages/Credits.qml \
@@ -37,8 +34,13 @@ OTHER_FILES += qml/VegSailor.qml \
     qml/pages/veganguide.py \
     qml/pages/veggiesailor.py \
     qml/pages/veganguide.py \
-    rpm/VegSailor.changes.in \
-    qml/pages/Fav.qml
+    qml/pages/Fav.qml \
+    rpm/harbour-veggiesailor.spec \
+    rpm/harbour-veggiesailor.yaml \
+    rpm/harbour-veggiesailor.changes.in \
+    harbour-veggiesailor.png \
+    harbour-veggiesailor.desktop \
+    qml/harbour-veggiesailor.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
