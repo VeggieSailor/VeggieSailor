@@ -65,22 +65,25 @@ Page {
                     text: veg_level_description
                     color: highlighted ? Theme.highlightColor : Theme.secondaryColor
                     font.pixelSize: Theme.fontSizeSmall
-                    width: parent.width - image1.width
+                    width: parent.width - (Theme.fontSizeSmall * rating_parsed)
 
+                }
+                Repeater {
+                    id: repeater
+
+                    model: rating_parsed
+
+                    Image
+                    {
+                        id:image
+                        source: "image://theme/icon-m-favorite-selected"
+                        height: Theme.fontSizeSmall
+                        width: Theme.fontSizeSmall
+
+                    }
                 }
 
 
-                Image
-                {
-                    id: image1
-                    source: "image://theme/icon-cover-pause"
-                    height: Theme.fontSizeSmall
-                    width: Theme.fontSizeSmall
-//                    x: page.width - width
-//                    anchors.fill: parent
-//                    anchors.
-
-                }
 
                 }
             }
@@ -120,9 +123,6 @@ Page {
                 py.call('listmodel.get_entries', [page.uri], function(result) {
                     for (var i=0; i<result.length; i++) {
                         listModel.append(result[i]);
-                        console.log(JSON.stringify(result[i]));
-//                        number = result[i]['weighted_rating'];
-                        console.log(result[i]['rating_parsed']);
                     }
                     loadingData = false;
                 });
