@@ -12,7 +12,7 @@ Page {
     property string entries_uri
     property var children
     property string call_uri
-    call_uri: uri ? uri : "http://www.vegguide.org"
+    call_uri: uri ? uri : "https://www.vegguide.org"
     property string header
     property bool loadingData
 
