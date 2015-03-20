@@ -45,6 +45,7 @@ Page {
                 }
             }
             Column {
+                id:column
                 anchors {
                     left: parent.left
                     leftMargin: Theme.paddingLarge
@@ -55,11 +56,35 @@ Page {
                 Label {
                     text: name
                     color: highlighted ? Theme.highlightColor : Theme.primaryColor
+
                 }
+                Row {
+                    width: column.width
                 Label {
+                    id: text1
                     text: veg_level_description
                     color: highlighted ? Theme.highlightColor : Theme.secondaryColor
                     font.pixelSize: Theme.fontSizeSmall
+                    width: parent.width - (Theme.fontSizeSmall * rating_parsed)
+
+                }
+                Repeater {
+                    id: repeater
+
+                    model: rating_parsed
+
+                    Image
+                    {
+                        id:image
+                        source: "image://theme/icon-m-favorite-selected"
+                        height: Theme.fontSizeSmall
+                        width: Theme.fontSizeSmall
+
+                    }
+                }
+
+
+
                 }
             }
 

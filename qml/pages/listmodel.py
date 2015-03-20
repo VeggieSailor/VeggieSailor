@@ -148,6 +148,15 @@ def adjust_entry(entry):
         entry['tags'] = []
     entry['tags_txt'] = ', '.join(entry['tags'])
 
+
+    if 'weighted_rating' not in entry:
+        entry['weighted_rating'] = '0.0'
+
+
+    entry['rating_parsed'] = int(round(float(entry['weighted_rating'])))
+
+
+
     if not 'veg_level' in entry:
         entry['veg_level'] = 5
 

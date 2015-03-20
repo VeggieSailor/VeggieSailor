@@ -6,7 +6,7 @@
 import json
 from urllib import request
 
-BASE_URL = 'http://www.vegguide.org/'
+BASE_URL = 'https://www.vegguide.org/'
 
 class VegGuideRequest(request.Request):
     def __init__(self, url=BASE_URL):
