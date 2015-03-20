@@ -310,4 +310,5 @@ def get_hours_dict(hours_dicts_list):
 
 
 if __name__ == "__main__":
-    bcn = get_entries('http://www.vegguide.org/region/583')
+    bcn = get_entries('https://www.vegguide.org/region/583')
+    print (bcn[0]['hours'], get_hours_dict(bcn[0]['hours']))
