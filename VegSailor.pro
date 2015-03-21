@@ -28,7 +28,6 @@ OTHER_FILES += \
     qml/pages/Credits.qml \
     qml/pages/PlaceInfo.qml \
     qml/pages/vegguide.py \
-    qml/pages/City.qml \
     qml/pages/Browse.qml \
     qml/pages/veggiesailor.py \
     qml/pages/veganguide.py \
@@ -40,7 +39,9 @@ OTHER_FILES += \
     rpm/harbour-veggiesailor.changes.in \
     harbour-veggiesailor.png \
     harbour-veggiesailor.desktop \
-    qml/harbour-veggiesailor.qml
+    qml/harbour-veggiesailor.qml \
+    qml/pages/Entries.qml \
+    qml/pages/controller.py
 
 # to disable building translations every time, comment out the
 # following CONFIG line

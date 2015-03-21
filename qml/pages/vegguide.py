@@ -71,10 +71,89 @@ class RegionsTree(VegGuideTree):
 
 
 class VegGuideObject(object):
-    def __init__(self, uri):
+    """Basic VegGuide Object.
+    """
+    def __init__(self, uri, parent=None, payload_json=None, cache_class=None):
+        """Initialization of the VegGuideObject
+
+        Parameters
+        ----------
+        url : str
+        parent : VegGuideObject
+        """
+        self.cache_class = cache_class
         self.uri = uri
-        req = VegGuideRequest(self.uri)
-        self.results =  VegGuideParser(req).result
+        self.vgo_id = uri.replace('https://www.vegguide.org/', '')
+        self.parent = parent
+
+        if payload_json == None:
+            req = VegGuideRequest(self.uri)
+            self.results =  VegGuideParser(req).result
+            self.results_json = json.dumps(self.results)
+        else:
+           print("HERE", payload_json, type(payload_json))
+           self.results_json = payload_json
+           self.results = json.loads(self.results_json)
+
+
+
+
+        self._children = []
+
+        if self.is_country():
+            self.vgo_type = 'region'
+        elif self.is_entry():
+            self.vgo_type = 'entry'
+        elif self.is_entries():
+            self.vgo_type = 'entries'
+        else:
+            self.vgo_type = 'unknown'
+
+    def __str__(self):
+        return '<VegGuideObject-%s-/%s>' % (self.vgo_type,self.vgo_id)
+
+    def is_country(self):
+        try:
+            return self.results['is_country'] == '1'
+        except KeyError:
+            return False
+
+    def is_entry(self):
+        if self.uri.find('/entry/')>-1:
+            return True
+        return False
+
+    def is_entries(self):
+        if self.uri.find('/entries/')>-1:
+            return True
+        return False
+
+    def children(self):
+        if not self._children:
+            self.fetch_children()
+        return self._children
+
+    def fetch_children(self, force=False):
+        if len(self._children)==0 or force == True:
+            if self.has_children():
+                print('ok, will go')
+                for child in self.results['children']:
+                    if self.cache_class:
+
+                        vgo = self.cache_class(child['uri'])
+                    else:
+                        vgo = VegGuideObject(child['uri'], self)
+                    self._children.append(vgo)
+                    print(child['uri'])
+
+    def has_children(self):
+        return 'children' in self.results
+
+    def has_entries(self):
+        try:
+            return int(self.results['entry_count']) > 0
+        except KeyError:
+            return False
 
 class VegGuideObjectEntries(object):
     def __init__(self, uri):

@@ -14,11 +14,40 @@ def check_has_regions(seq):
     """
     for j in range(len(seq)):
         seq[j]['has_entries'] = 0
+        #print ("cipka",str(seq[j]).encode('utf-8'))
         if int(seq[j]['entry_count']) != 0 and int(seq[j]['is_country']) != 1:
             seq[j]['has_entries'] = 1
+
+        if int(seq[j]['entry_count']) != 0 and ('regions' not in seq[j] or 'children' not in seq[j]) :
+            seq[j]['has_entries'] = 1
+        #print ("cipka",str(seq[j]).encode('utf-8'))
     return seq
 
 class VegGuideCache(object):
+    """Cache wrapper for VegGuideObject
+
+    Parameters
+    ----------
+    uri : str
+    obj_type :  VegGuideObject or VegGuideObjectEntries"""
+    def __init__(self, uri, obj_type):
+        self.cache = veggiesailor.CacheHttp(uri)
+
+
+        results = self.cache.get()
+
+        try:
+            self.results = json.loads(results)
+        except TypeError:
+            print("TypeError self.results", results)
+            self.results = None
+
+        if not self.results:
+            provider = obj_type(uri)
+            # super().__init__(uri)
+            self.cache.put(json.dumps(provider.results))
+
+class VGCache(object):
     """Cache wrapper for VegGuideObject
 
     Parameters
@@ -63,6 +92,34 @@ class VegGuideObjectCache(vegguide.VegGuideObject):
             super().__init__(uri)
             self.cache.put(json.dumps(self.results))
 
+class VGOCache(vegguide.VegGuideObject):
+    """Cache wrapper for VegGuideObject.
+
+    Parameters
+    ----------
+    uri : str"""
+
+    def __init__(self, uri):
+        self.cache = veggiesailor.CacheHttp(uri)
+        results = self.cache.get()
+
+        try:
+            self.results_json = results
+        except TypeError:
+            print("TypeError - maybe not in cache self.results", results)
+            self.results_json = None
+
+
+
+        if not self.results_json:
+            super().__init__(uri)
+            print (self.results_json)
+            self.cache.put(self.results_json)
+        else:
+            super().__init__(uri, payload_json=self.results_json,cache_class=self.__class__)
+        def __str__(self):
+            return '<VGOCache-%s-/%s>' % (self.vgo_type,self.vgo_id)
+
 class VegGuideObjectEntriesCache(vegguide.VegGuideObjectEntries):
     """Cache wrapper for VegGuideObjectEntries.
     Parameters
@@ -75,7 +132,7 @@ class VegGuideObjectEntriesCache(vegguide.VegGuideObjectEntries):
         try:
             self.results = json.loads(results)
         except TypeError:
-            print("TypeError self.results", results)
+            print("TypeError Entries self.results", results)
             self.results = None
 
         if not self.results:
@@ -106,11 +163,18 @@ def get_vegguide_children(uri):
     TODO: Due to this issues: https://github.com/bluszcz/VeggieSailor/issues/9
     there must be performed extra check if we are not loosing any data.
     """
+
+    print("MY URI", uri)
+
     children = VegGuideObjectCache(uri)
     try:
         result = children.results['children']
     except KeyError: # https://github.com/bluszcz/VeggieSailor/issues/9
+        """TODO: Perhaps only entries, but please verify it"""
         result = []
+    print("MY URI", uri)
+    print('CHECK', str(result).encode('utf-8'))
+
     return check_has_regions(result)
 
 def adjust_entry(entry):
@@ -319,5 +383,18 @@ def get_hours_dict(hours_dicts_list):
 
 
 if __name__ == "__main__":
-    bcn = get_entries('https://www.vegguide.org/region/583')
-    print (bcn[0]['hours'], get_hours_dict(bcn[0]['hours']))
+
+    #regs = get_vegguide_regions('http://www.vegguide.org/region/2236')
+    #    print(regs)
+    ccc = get_vegguide_children('http://www.vegguide.org/region/2236')
+    print(ccc)
+
+    ccc = get_vegguide_children('http://www.vegguide.org/region/583')
+    print(ccc)
+
+
+    ccc = get_vegguide_children('http://www.vegguide.org/region/66')
+#    print(ccc)
+#    from ipdb import set_trace; set_trace()
+    #bcn = get_entries('https://www.vegguide.org/region/583')
+    #print (bcn[0]['hours'], get_hours_dict(bcn[0]['hours']))

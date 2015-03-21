@@ -48,6 +48,7 @@ Page {
 
             }
             onClicked: {
+//                console.log(JSON.stringify(entries_uri));
                 if(isRegion()) {
                     pageStack.push(Qt.resolvedUrl("Browse.qml"),
                                     {
@@ -57,7 +58,7 @@ Page {
                                         "uri": uri
                                     });
                 } else {
-                    pageStack.push(Qt.resolvedUrl("City.qml"),
+                    pageStack.push(Qt.resolvedUrl("Entries.qml"),
                                     {
                                         "uri": uri,
                                         "mytext":name
@@ -66,6 +67,7 @@ Page {
             }
 
             function isRegion() {
+                console.log("BLA BLA has_entries", has_entries);
                  return has_entries == 0
             }
         }
@@ -84,6 +86,7 @@ Page {
             loadingData = true;
             importModule('listmodel', function () {
                 if (page.uri) {
+                    console.log("GET 1", page.call_uri);
                     py.call('listmodel.get_vegguide_children', [page.call_uri], fillListModel);
                 } else {
                     py.call('listmodel.get_vegguide_regions', ['primary',page.call_uri], fillListModel);
@@ -92,6 +95,8 @@ Page {
         }
 
         function fillListModel(data) {
+
+
             for (var i=0; i<data.length; i++) {
                 listModel.append(data[i]);
             }
