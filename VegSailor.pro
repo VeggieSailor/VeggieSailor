@@ -41,7 +41,9 @@ OTHER_FILES += \
     harbour-veggiesailor.desktop \
     qml/harbour-veggiesailor.qml \
     qml/pages/Entries.qml \
-    qml/pages/controller.py
+    qml/pages/controller.py \
+    pyveggiesailor/jollatest.py \
+    pyveggiesailor/__init__.py
 
 # to disable building translations every time, comment out the
 # following CONFIG line

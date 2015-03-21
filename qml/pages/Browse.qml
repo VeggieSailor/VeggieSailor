@@ -83,9 +83,21 @@ Page {
         id: py
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('.'));
+            addImportPath(Qt.resolvedUrl('..'));
+            addImportPath(Qt.resolvedUrl('../..'));
+
+
+
             loadingData = true;
+            importModule('pyveggiesailor', function () {
+                    console.log("JOLLA TEST");
+                py.call('pyveggiesailor.jollatest.lala2', ['ra ka '], function (res) {console.log('PPP'+res)});
+
+            })
+
             importModule('listmodel', function () {
                 if (page.uri) {
+                    // Get the root of the VegGuide tree
                     console.log("GET 1", page.call_uri);
                     py.call('listmodel.get_vegguide_children', [page.call_uri], fillListModel);
                 } else {
