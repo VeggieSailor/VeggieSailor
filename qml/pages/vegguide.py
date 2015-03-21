@@ -80,6 +80,8 @@ class VegGuideObject(object):
         ----------
         url : str
         parent : VegGuideObject
+        payload_json : json str
+        cache_class : class
         """
         self.cache_class = cache_class
         self.uri = uri
@@ -91,14 +93,11 @@ class VegGuideObject(object):
             self.results =  VegGuideParser(req).result
             self.results_json = json.dumps(self.results)
         else:
-           print("HERE", payload_json, type(payload_json))
            self.results_json = payload_json
            self.results = json.loads(self.results_json)
 
-
-
-
         self._children = []
+        self._entries = []
 
         if self.is_country():
             self.vgo_type = 'region'
@@ -117,6 +116,8 @@ class VegGuideObject(object):
             return self.results['is_country'] == '1'
         except KeyError:
             return False
+        except TypeError:
+            return False
 
     def is_entry(self):
         if self.uri.find('/entry/')>-1:
@@ -133,18 +134,37 @@ class VegGuideObject(object):
             self.fetch_children()
         return self._children
 
+    def entries(self):
+        if not self._entries:
+            self.fetch_entries()
+        return self._entries
+
+    def fetch_entries(self, force=False):
+        if len(self._entries)==0 or force == True:
+            if self.has_entries():
+                if self.cache_class:
+                    entries_tmp = self.cache_class(self.results['entries_uri'])
+                else:
+                    entries_tmp = VegGuideObject(self.results['entries_uri'], self)
+                for child in entries_tmp.results:
+                    if self.cache_class:
+                        vgo = self.cache_class(child['uri'])
+                    else:
+                        vgo = VegGuideObject(child['uri'], self)
+                    self._entries.append(vgo)
+
+
+
+
     def fetch_children(self, force=False):
         if len(self._children)==0 or force == True:
             if self.has_children():
-                print('ok, will go')
                 for child in self.results['children']:
                     if self.cache_class:
-
                         vgo = self.cache_class(child['uri'])
                     else:
                         vgo = VegGuideObject(child['uri'], self)
                     self._children.append(vgo)
-                    print(child['uri'])
 
     def has_children(self):
         return 'children' in self.results
