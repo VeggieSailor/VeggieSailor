@@ -164,16 +164,13 @@ def get_vegguide_children(uri):
     there must be performed extra check if we are not loosing any data.
     """
 
-    print("MY URI", uri)
-
     children = VegGuideObjectCache(uri)
     try:
         result = children.results['children']
     except KeyError: # https://github.com/bluszcz/VeggieSailor/issues/9
         """TODO: Perhaps only entries, but please verify it"""
         result = []
-    print("MY URI", uri)
-    print('CHECK', str(result).encode('utf-8'))
+
 
     return check_has_regions(result)
 

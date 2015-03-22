@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def lala4(var):
-    return var*3
-
 from pyveggiesailor.vegguide_cache import VGOCache
 
 def check_has_regions(seq):
@@ -15,13 +12,11 @@ def check_has_regions(seq):
     """
     for j in range(len(seq)):
         seq[j]['has_entries'] = 0
-        #print ("cipka",str(seq[j]).encode('utf-8'))
         if int(seq[j]['entry_count']) != 0 and int(seq[j]['is_country']) != 1:
             seq[j]['has_entries'] = 1
 
         if int(seq[j]['entry_count']) != 0 and ('regions' not in seq[j] or 'children' not in seq[j]) :
             seq[j]['has_entries'] = 1
-        #print ("cipka",str(seq[j]).encode('utf-8'))
     return seq
 
 def get_root():
