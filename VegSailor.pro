@@ -35,7 +35,6 @@ OTHER_FILES += \
     qml/pages/veganguide.py \
     qml/pages/Fav.qml \
     rpm/harbour-veggiesailor.spec \
-    rpm/harbour-veggiesailor.yaml \
     rpm/harbour-veggiesailor.changes.in \
     harbour-veggiesailor.png \
     harbour-veggiesailor.desktop \
@@ -43,7 +42,9 @@ OTHER_FILES += \
     qml/pages/Entries.qml \
     qml/pages/controller.py \
     pyveggiesailor/jollatest.py \
-    pyveggiesailor/__init__.py
+    pyveggiesailor/__init__.py \
+    rpm/harbour-veggiesailor.legacy \
+    rpm/harbour-veggiesailor.yaml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -58,3 +59,6 @@ TRANSLATIONS += translations/harbour-veggiesailor-de.ts
 RESOURCES += \
     images.qrc
 
+pyveggiesailor.path = /usr/share/$${TARGET}
+pyveggiesailor.files = pyveggiesailor
+INSTALLS += pyveggiesailor

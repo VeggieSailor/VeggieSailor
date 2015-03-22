@@ -89,7 +89,7 @@ Page {
 
 
             loadingData = true;
-            importModule('pyveggiesailor', function () {
+            importModule('pyveggiesailor.jollatest', function () {
                     console.log("JOLLA TEST");
                 py.call('pyveggiesailor.jollatest.lala2', ['ra ka '], function (res) {console.log('PPP'+res)});
 
