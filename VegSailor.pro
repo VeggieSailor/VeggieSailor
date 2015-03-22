@@ -41,7 +41,6 @@ OTHER_FILES += \
     qml/harbour-veggiesailor.qml \
     qml/pages/Entries.qml \
     qml/pages/controller.py \
-    pyveggiesailor/jollatest.py \
     pyveggiesailor/__init__.py \
     rpm/harbour-veggiesailor.legacy \
     rpm/harbour-veggiesailor.yaml \
