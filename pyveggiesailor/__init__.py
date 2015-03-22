@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-__all__ = ['jollatest']
+__all__ = ['controller','vegguide_cache']

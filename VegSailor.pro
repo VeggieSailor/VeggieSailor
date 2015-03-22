@@ -44,7 +44,8 @@ OTHER_FILES += \
     pyveggiesailor/jollatest.py \
     pyveggiesailor/__init__.py \
     rpm/harbour-veggiesailor.legacy \
-    rpm/harbour-veggiesailor.yaml
+    rpm/harbour-veggiesailor.yaml \
+    pyveggiesailor/vegguide_cache.py
 
 # to disable building translations every time, comment out the
 # following CONFIG line
