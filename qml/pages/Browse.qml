@@ -48,7 +48,6 @@ Page {
 
             }
             onClicked: {
-//                console.log(JSON.stringify(entries_uri));
                 if(isRegion()) {
                     pageStack.push(Qt.resolvedUrl("Browse.qml"),
                                     {
@@ -67,7 +66,6 @@ Page {
             }
 
             function isRegion() {
-                console.log("BLA BLA has_entries", has_entries);
                  return has_entries == 0
             }
         }
