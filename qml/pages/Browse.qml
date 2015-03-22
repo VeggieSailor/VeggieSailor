@@ -85,40 +85,22 @@ Page {
             addImportPath(Qt.resolvedUrl('.'));
             addImportPath(Qt.resolvedUrl('..'));
             addImportPath(Qt.resolvedUrl('../..'));
-
-
-
             loadingData = true;
+            //TODO: rewrite everything to pyveggiesailor.controller
             importModule('pyveggiesailor.controller', function () {
-//                    console.log("JOLLA TEST");
-                py.call('pyveggiesailor.controller.lala4', ['ra ka '], function (res) {
-//                    console.log('PPP'+res);
-
-
-
-                });
+                if (!page.uri) {
                 py.call('pyveggiesailor.controller.get_root', [], fillListModel);
-
-            })
-
-
-
+                }
+                })
             importModule('listmodel', function () {
                 if (page.uri) {
-                    // Get the root of the VegGuide tree
-                    console.log("GET 1", page.call_uri);
+                    // Get the children
                     py.call('listmodel.get_vegguide_children', [page.call_uri], fillListModel);
-                } else {
-//                    py.call('listmodel.get_vegguide_regions', ['primary',page.call_uri], fillListModel);
                 }
             });
         }
 
         function fillListModel(data) {
-
-
-            console.log(JSON.stringify(data));
-
             for (var i=0; i<data.length; i++) {
                 listModel.append(data[i]);
             }
