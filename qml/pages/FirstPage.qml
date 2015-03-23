@@ -83,7 +83,7 @@ Page {
                         x: Theme.paddingLarge
                         MouseArea {
                             anchors.fill: parent
-                            onClicked: pageStack.push(Qt.resolvedUrl("City.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
+                            onClicked: pageStack.push(Qt.resolvedUrl("Entries.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
                         }
                     }
                     Image {
@@ -94,7 +94,7 @@ Page {
                         source: image
                         MouseArea {
                             anchors.fill: parent
-                            onClicked: pageStack.push(Qt.resolvedUrl("City.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
+                            onClicked: pageStack.push(Qt.resolvedUrl("Entries.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
                         }
                     }
                 }

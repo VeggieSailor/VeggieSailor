@@ -40,7 +40,7 @@ Page {
                 onClicked:
                 {
                     onClicked: {
-                        py.call('listmodel.fav_place', [page.uri, {'name':page.name, 'city':page.city, 'color_txt':page.color_txt, 'uri':page.uri,'veg_level_description':page.veg_level_description}],function(result) {
+                        py.call('pyveggiesailor.controller.fav_place', [page.uri, {'name':page.name, 'city':page.city, 'color_txt':page.color_txt, 'uri':page.uri,'veg_level_description':page.veg_level_description}],function(result) {
                             if (result==1)
                             {
                                 favorite.text = "Remove from favorites";
@@ -60,9 +60,6 @@ Page {
                 addImportPath(Qt.resolvedUrl('.'));
                 addImportPath(Qt.resolvedUrl('..'));
                 addImportPath(Qt.resolvedUrl('../..'));
-                importModule('listmodel', function() {
-
-                });
 
                 importModule('pyveggiesailor.controller', function () {
 
@@ -78,7 +75,6 @@ Page {
                     });
 
                     py.call('pyveggiesailor.controller.get_entry_image', [page.uri], function(res){
-                        console.log("EEE", res);
                         thumb.source = res;
                     });
 

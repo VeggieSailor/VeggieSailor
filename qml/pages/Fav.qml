@@ -11,7 +11,7 @@ Page {
         {
             placesModel.clear();
 
-    py.call('listmodel.fav_places', [],function(result) {
+    py.call('pyveggiesailor.controller.fav_places', [],function(result) {
         for (var i=0; i<result.length; i++) {
             placesModel.append(result[i]);
         }
@@ -151,6 +151,8 @@ Page {
                     id: py
                     Component.onCompleted: {
                         addImportPath(Qt.resolvedUrl('.'));
+                        addImportPath(Qt.resolvedUrl('..'));
+                        addImportPath(Qt.resolvedUrl('../..'));
                         importModule('listmodel', function(result) {
                             placesModel.clear();
                         });

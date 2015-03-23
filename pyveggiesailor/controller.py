@@ -54,6 +54,17 @@ def fav_place_check(uri):
     """
     return veggiesailor.StorageFav().exists(uri)
 
+def fav_place(uri, data={}):
+    """Switch favorite status of the place.
+    """
+    sv = veggiesailor.StorageFav()
+    return sv.switch(uri, 1, data)
+def fav_places():
+    """Get favorite places.
+    """
+    sv = veggiesailor.StorageFav()
+    results = sv.get_favorites()
+    return results
 if __name__ == "__main__":
     from  vegguide import VegGuideObject
 

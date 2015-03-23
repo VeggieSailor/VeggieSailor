@@ -86,7 +86,7 @@ def check_version_stamp(stamp=1):
     current = int( open(filestamp).read().strip())
 
 
-    if current < stamp:
+    if current >= stamp:
         return True
     else:
         write_version_stamp(stamp)
