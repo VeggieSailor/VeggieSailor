@@ -66,6 +66,12 @@ Page {
             }
 
             function isRegion() {
+
+                 if (['United Kingdom'].indexOf(name)>-1)
+                 {
+                     return true;
+                 }
+
                  return has_entries == 0
             }
         }
@@ -84,21 +90,17 @@ Page {
             addImportPath(Qt.resolvedUrl('..'));
             addImportPath(Qt.resolvedUrl('../..'));
             loadingData = true;
-            //TODO: rewrite everything to pyveggiesailor.controller
             importModule('pyveggiesailor.controller', function () {
                 if (!page.uri) {
                 py.call('pyveggiesailor.controller.get_root', [], fillListModel);
+                } else {
+                    py.call('pyveggiesailor.controller.get_children', [page.call_uri], fillListModel);
                 }
                 })
-            importModule('listmodel', function () {
-                if (page.uri) {
-                    // Get the children
-                    py.call('listmodel.get_vegguide_children', [page.call_uri], fillListModel);
-                }
-            });
         }
 
         function fillListModel(data) {
+//            console.log(JSON.stringify(data));
             for (var i=0; i<data.length; i++) {
                 listModel.append(data[i]);
             }

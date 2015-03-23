@@ -391,7 +391,7 @@ if __name__ == "__main__":
 
 
     ccc = get_vegguide_children('http://www.vegguide.org/region/66')
-#    print(ccc)
+    print(ccc)
 #    from ipdb import set_trace; set_trace()
     #bcn = get_entries('https://www.vegguide.org/region/583')
     #print (bcn[0]['hours'], get_hours_dict(bcn[0]['hours']))
