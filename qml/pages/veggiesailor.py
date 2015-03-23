@@ -64,6 +64,13 @@ def init_config_dir():
     if not os.path.exists(CONFIG):
         os.makedirs(CONFIG)
 
+def write_version_stamp(stamp=1):
+    print("write_version_stamp", 1)
+    filestamp = os.path.join(CONFIG,'timestamp_00')
+    fd = open(filestamp,'w')
+    fd.write(str(stamp))
+    fd.close()
+
 def check_version_stamp(stamp=1):
     """Simply versioning.
 
@@ -73,12 +80,21 @@ def check_version_stamp(stamp=1):
     """
 
     init_config_dir()
-    if not os.path.exists(os.path.join(CONFIG,'timestamp_00')):
-        fd = open(os.path.join(CONFIG,'timestamp_00'),'w')
-        fd.write(str(VERSION_STAMP))
-        fd.close()
+    filestamp = os.path.join(CONFIG,'timestamp_00')
+    if not os.path.exists(filestamp):
+        write_version_stamp(VERSION_STAMP)
         return False
-    return True
+    current = int( open(filestamp).read().strip())
+    print(current)
+
+    if current < stamp:
+        return True
+    else:
+        write_version_stamp(stamp)
+        return False
+    print(current)
+
+
 
 
 def purge_all_cache():
@@ -88,6 +104,9 @@ def purge_all_cache():
         shutil.rmtree(CACHE)
     except FileNotFoundError:
         init_cache_dir()
+
+if not check_version_stamp(3):
+    purge_all_cache()
 
 class Cache(object):
     """Main caching class.
@@ -224,6 +243,8 @@ class StorageFav(Storage):
         self.cursor.execute(query)
         self.conn.commit()
         self.create_table()
+
+
 
 
 if __name__=="__main__":

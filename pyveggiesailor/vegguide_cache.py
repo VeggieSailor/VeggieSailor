@@ -26,7 +26,6 @@ class VGOCache(vegguide.VegGuideObject):
 
         if not self.results_json:
             super().__init__(uri)
-            print (self.results_json)
             self.cache.put(self.results_json)
         else:
             super().__init__(uri, payload_json=self.results_json,cache_class=self.__class__)

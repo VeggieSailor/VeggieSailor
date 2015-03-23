@@ -65,7 +65,8 @@ def init_config_dir():
         os.makedirs(CONFIG)
 
 def write_version_stamp(stamp=1):
-    fd = open(os.path.join(CONFIG,'timestamp_00'),'w')
+    filestamp = os.path.join(CONFIG,'timestamp_00')
+    fd = open(filestamp,'w')
     fd.write(str(stamp))
     fd.close()
 
@@ -84,11 +85,13 @@ def check_version_stamp(stamp=1):
         return False
     current = int( open(filestamp).read().strip())
 
-    if current >= stamp:
+
+    if current < stamp:
         return True
     else:
         write_version_stamp(stamp)
-    print(current)
+        return False
+
 
 
 
@@ -101,7 +104,7 @@ def purge_all_cache():
     except FileNotFoundError:
         init_cache_dir()
 
-if not check_version_stamp(2):
+if not check_version_stamp(3):
     purge_all_cache()
 
 class Cache(object):
@@ -267,5 +270,6 @@ if __name__=="__main__":
     import time
     from random import randint
     sf.switch('aaa'+str(time.time()), 1, {randint(0,128):randint(0,128)})
+
 
 
