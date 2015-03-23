@@ -65,7 +65,6 @@ def init_config_dir():
         os.makedirs(CONFIG)
 
 def write_version_stamp(stamp=1):
-    print("write_version_stamp", 1)
     filestamp = os.path.join(CONFIG,'timestamp_00')
     fd = open(filestamp,'w')
     fd.write(str(stamp))
@@ -85,14 +84,12 @@ def check_version_stamp(stamp=1):
         write_version_stamp(VERSION_STAMP)
         return False
     current = int( open(filestamp).read().strip())
-    print(current)
 
     if current < stamp:
         return True
     else:
         write_version_stamp(stamp)
         return False
-    print(current)
 
 
 
