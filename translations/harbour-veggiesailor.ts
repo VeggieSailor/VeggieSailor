@@ -71,37 +71,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="83"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="111"/>
         <source>Veg Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="88"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="116"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="93"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="121"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="98"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="126"/>
         <source>Price Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="103"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="131"/>
         <source>Hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="108"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="136"/>
         <source>Cuisines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="112"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>

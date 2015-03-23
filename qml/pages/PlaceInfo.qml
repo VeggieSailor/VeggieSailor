@@ -58,8 +58,16 @@ Page {
             id: py
             Component.onCompleted: {
                 addImportPath(Qt.resolvedUrl('.'));
+                addImportPath(Qt.resolvedUrl('..'));
+                addImportPath(Qt.resolvedUrl('../..'));
                 importModule('listmodel', function() {
-                    py.call('listmodel.fav_place_check', [page.uri],function(result) {
+
+                });
+
+                importModule('pyveggiesailor.controller', function () {
+
+
+                    py.call('pyveggiesailor.controller.fav_place_check', [page.uri],function(result) {
                         if (result==1)
                         {
                             favorite.text = "Remove from favorites";
@@ -68,9 +76,19 @@ Page {
                             favorite.text = "Add to favorites";
                         }
                     });
-                });
+
+                    py.call('pyveggiesailor.controller.get_entry_image', [page.uri], function(res){
+                        console.log("EEE", res);
+                        thumb.source = res;
+                    });
+
+                    })
+
+
             }
         }
+
+
         Column {
             id: column
             width: page.width
@@ -79,6 +97,16 @@ Page {
                 id: pageHeader
                 title: qsTr(name)
             }
+
+
+                Image {
+                    id:thumb
+                    x: Theme.paddingLarge
+                    anchors.horizontalCenter: parent.horizontalCenter
+
+                }
+
+
             DetailItem {
                 label: qsTr('Veg Level')
                 value: qsTr(page.veg_level_description)
@@ -112,8 +140,8 @@ Page {
                 label: qsTr('Tags')
                 value: qsTr(page.tags_txt)
             }
-
+}
 
         }
     }
-}
+

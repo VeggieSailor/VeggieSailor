@@ -2,6 +2,20 @@
 # -*- coding: utf-8 -*-
 
 from pyveggiesailor.vegguide_cache import VGOCache
+import pyveggiesailor.veggiesailor as veggiesailor
+
+
+def get_entry(uri):
+    entry = VGOCache(uri)
+    return entry.results
+
+def get_entry_image(uri):
+    entry = get_entry(uri)
+    try:
+        return entry['images'][0]['files'][1]['uri'].replace('https','http')
+    except KeyError:
+        return ''
+
 
 def check_has_regions(seq):
     """Updates list with missing values.
@@ -35,6 +49,10 @@ def get_children(uri):
     children = VGOCache(uri).results['children']
     return check_has_regions(children)
 
+def fav_place_check(uri):
+    """Check is place is favorite.
+    """
+    return veggiesailor.StorageFav().exists(uri)
 
 if __name__ == "__main__":
     from  vegguide import VegGuideObject
@@ -52,6 +70,11 @@ if __name__ == "__main__":
 
     bcn = VGOCache('https://www.vegguide.org/entry/14683')
     bar  = VGOCache('https://www.vegguide.org/entry/12300')
+
+
+    print(get_entry('http://www.vegguide.org/entry/20647'))
+    print(get_entry_image('http://www.vegguide.org/entry/20647'))
+
 
 #    for i in (spain2,giblartar, bcn, bar):
 #        print(i, i.has_children())
