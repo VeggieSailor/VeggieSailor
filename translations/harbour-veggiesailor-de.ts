@@ -16,6 +16,16 @@
         <source>Credits</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/Credits.qml" line="16"/>
+        <source>Veggie Sailor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Credits.qml" line="45"/>
+        <source>If you like the app - please support us, we need developers, translators, content editors and more :)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Fav</name>
@@ -76,32 +86,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="114"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="112"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="121"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="117"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="128"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="122"/>
         <source>Price Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="135"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="127"/>
         <source>Hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="142"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="132"/>
         <source>Cuisines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="146"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="136"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
