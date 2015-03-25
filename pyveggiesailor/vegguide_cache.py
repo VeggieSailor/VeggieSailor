@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import vegguide
-import veggiesailor
+import pyveggiesailor.vegguide as vegguide
+import pyveggiesailor.veggiesailor as veggiesailor
 
 
 class VGOCache(vegguide.VegGuideObject):
@@ -21,8 +21,6 @@ class VGOCache(vegguide.VegGuideObject):
         except TypeError:
             print("TypeError - maybe not in cache self.results", results)
             self.results_json = None
-
-
 
         if not self.results_json:
             super().__init__(uri)

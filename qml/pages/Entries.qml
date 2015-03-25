@@ -117,10 +117,10 @@ Page {
     Python {
         id: py
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('.'));
-            importModule('listmodel', function () {
+            addImportPath(Qt.resolvedUrl('../..'));
+            importModule('pyveggiesailor.controller', function () {
                 loadingData = true;
-                py.call('listmodel.get_entries', [page.uri], function(result) {
+                py.call('pyveggiesailor.controller.get_entries', [page.uri], function(result) {
                     for (var i=0; i<result.length; i++) {
                         listModel.append(result[i]);
                     }

@@ -11,7 +11,7 @@ Page {
             MenuItem {
                 text: qsTr("Clear cache")
                 onClicked: {
-                    py.call('veggiesailor.purge_all_cache',  [], function(result) {});
+                    py.call('pyveggiesailor.veggiesailor.purge_all_cache',  [], function(result) {});
                 }            }
             MenuItem {
                 text: qsTr("Credits")
@@ -29,8 +29,8 @@ Page {
         Python {
             id: py
             Component.onCompleted: {
-                addImportPath(Qt.resolvedUrl('.'));
-                importModule('veggiesailor', function() {});
+                addImportPath(Qt.resolvedUrl('../..'));
+                importModule('pyveggiesailor.veggiesailor', function() {});
             }
         }
         contentHeight: column.height

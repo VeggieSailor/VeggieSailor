@@ -29,10 +29,6 @@ OTHER_FILES += \
     qml/pages/PlaceInfo.qml \
     qml/pages/vegguide.py \
     qml/pages/Browse.qml \
-    qml/pages/veggiesailor.py \
-    qml/pages/veganguide.py \
-    qml/pages/veggiesailor.py \
-    qml/pages/veganguide.py \
     qml/pages/Fav.qml \
     rpm/harbour-veggiesailor.spec \
     rpm/harbour-veggiesailor.changes.in \
@@ -44,7 +40,8 @@ OTHER_FILES += \
     pyveggiesailor/__init__.py \
     rpm/harbour-veggiesailor.legacy \
     rpm/harbour-veggiesailor.yaml \
-    pyveggiesailor/vegguide_cache.py
+    pyveggiesailor/vegguide_cache.py \
+    qml/pages/veggiesailor.py.legacy
 
 # to disable building translations every time, comment out the
 # following CONFIG line
