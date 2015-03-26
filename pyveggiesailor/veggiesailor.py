@@ -256,7 +256,7 @@ if __name__=="__main__":
     test_dict = {'a':2, 'b':3}
     test_json = json.dumps(test_dict)
     ch.put(test_json)
-    purge_all_cache()
+    #purge_all_cache()
 
     s = Storage()
     sf = StorageFav()
@@ -271,5 +271,5 @@ if __name__=="__main__":
     from random import randint
     sf.switch('aaa'+str(time.time()), 1, {randint(0,128):randint(0,128)})
 
-
+    print(CONFIG, DATA, CACHE)
 

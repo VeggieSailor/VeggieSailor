@@ -147,15 +147,16 @@ def fav_places():
     return results
 if __name__ == "__main__":
     from  vegguide import VegGuideObject
-
+    from pprint import PrettyPrinter
+    p = PrettyPrinter()
 #    get_root()
 
 #    root = VGOCache('https://www.vegguide.org/')
 #    print(get_root())
 #    europe = VGOCache('https://www.vegguide.org/region/52')
 #    spain2 = VGOCache('https://www.vegguide.org/region/66')
-    print(get_children('https://www.vegguide.org/region/53'))
-    print(get_children('https://www.vegguide.org/region/2006'))
+#    print(get_children('https://www.vegguide.org/region/53'))
+#    print(get_children('https://www.vegguide.org/region/2006'))
     giblartar = VGOCache('https://www.vegguide.org/region/2236')
 
 
@@ -163,11 +164,11 @@ if __name__ == "__main__":
     bar  = VGOCache('https://www.vegguide.org/entry/12300')
 
 
-    print(get_entry('http://www.vegguide.org/entry/20647'))
-    print(get_entry_image('http://www.vegguide.org/entry/20647'))
+    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
+#    print(get_entry_image('http://www.vegguide.org/entry/20647'))
 
-    print(get_entries('http://www.vegguide.org/region/583'))
-
+#    print(get_entries('http://www.vegguide.org/region/583'))
+#    http://www.vegguide.org/entry/20647
 #    for i in (spain2,giblartar, bcn, bar):
 #        print(i, i.has_children())
 #        print(i, i.has_entries())

@@ -86,8 +86,6 @@ Page {
     Python {
         id: py
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('.'));
-            addImportPath(Qt.resolvedUrl('..'));
             addImportPath(Qt.resolvedUrl('../..'));
             loadingData = true;
             importModule('pyveggiesailor.controller', function () {

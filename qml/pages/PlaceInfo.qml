@@ -109,8 +109,24 @@ Page {
             }
 
             DetailItem {
+                id: address
+                property int entry_id
+                property string map_url
                 label: qsTr('Address')
                 value: qsTr(page.address)
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked:
+                    {
+                        console.log("START", page.uri);
+                        address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
+                        console.log("ENTRY_ID", address.entry_id);
+                        address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
+                        console.log("MY PAGE:",address.map_url);
+                        pageStack.push(Qt.resolvedUrl("EntryMap.qml"), {"map_url":address.map_url, "name":page.name});
+                    }
+
+                }
             }
 
             DetailItem {

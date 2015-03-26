@@ -22,12 +22,10 @@ OTHER_FILES += \
     qml/pages/SecondPage.qml \
     rpm/VegSailor.spec \
     translations/*.ts \
-    qml/pages/listmodel.py \
     qml/cover/VegSailor.png \
     qml/pages/images/barcelona.jpg \
     qml/pages/Credits.qml \
     qml/pages/PlaceInfo.qml \
-    qml/pages/vegguide.py \
     qml/pages/Browse.qml \
     qml/pages/Fav.qml \
     rpm/harbour-veggiesailor.spec \
@@ -36,12 +34,11 @@ OTHER_FILES += \
     harbour-veggiesailor.desktop \
     qml/harbour-veggiesailor.qml \
     qml/pages/Entries.qml \
-    qml/pages/controller.py \
     pyveggiesailor/__init__.py \
     rpm/harbour-veggiesailor.legacy \
     rpm/harbour-veggiesailor.yaml \
     pyveggiesailor/vegguide_cache.py \
-    qml/pages/veggiesailor.py.legacy
+    qml/pages/EntryMap.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

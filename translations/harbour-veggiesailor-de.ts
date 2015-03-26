@@ -86,32 +86,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="112"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="117"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="133"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="122"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="138"/>
         <source>Price Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="127"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="143"/>
         <source>Hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="132"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="148"/>
         <source>Cuisines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="136"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="152"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>

@@ -4,7 +4,6 @@
 import pyveggiesailor.vegguide as vegguide
 import pyveggiesailor.veggiesailor as veggiesailor
 
-
 class VGOCache(vegguide.VegGuideObject):
     """Cache wrapper for VegGuideObject.
 
