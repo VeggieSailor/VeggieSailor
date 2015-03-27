@@ -6,6 +6,8 @@ Page {
     property int entry_id
     property string map_url
     property string name
+    property string address
+    property string phone
 
 
     Column {
@@ -23,9 +25,22 @@ Page {
         id: webView
         x: Theme.paddingLarge
         width: parent.width - (Theme.paddingLarge*2)
-        height: parent.height - (Theme.paddingLarge*2) -(header.height*2)
+        height: parent.height - (Theme.paddingLarge*4) -header.height - label1.height - label2.height
         url: page.map_url
     }
+
+    DetailItem {
+        id: label1
+        label: qsTr('Address')
+        value: qsTr(page.address)
+    }
+
+    DetailItem {
+        id: label2
+        label: qsTr('Phone')
+        value: qsTr(page.phone)
+    }
+
     }
 
 }

@@ -47,7 +47,6 @@ Page {
             wrapMode: Text.WordWrap
             color: Theme.primaryColor
             x: Theme.paddingLarge
-
         }
 
 }

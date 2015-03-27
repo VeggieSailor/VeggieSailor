@@ -15,7 +15,7 @@ Page {
     property string long_description
 
     property string short_description
-
+    property string phone
     property variant cousines
     property variant cuisines_txt
     property string hours_txt
@@ -123,10 +123,16 @@ Page {
                         console.log("ENTRY_ID", address.entry_id);
                         address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
                         console.log("MY PAGE:",address.map_url);
-                        pageStack.push(Qt.resolvedUrl("EntryMap.qml"), {"map_url":address.map_url, "name":page.name});
+                        pageStack.push(Qt.resolvedUrl("EntryMap.qml"), {"map_url":address.map_url, "name":page.name,
+                                       "address":page.address, "phone":page.phone});
                     }
 
                 }
+            }
+
+            DetailItem {
+                label: qsTr('Phone')
+                value: qsTr(page.phone)
             }
 
             DetailItem {
