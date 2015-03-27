@@ -1,4 +1,4 @@
-BackgroundItem {
+EntryBackgroundItem {
             height: Theme.itemSizeMedium
             anchors {
                 left: parent.left
