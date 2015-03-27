@@ -38,7 +38,9 @@ OTHER_FILES += \
     rpm/harbour-veggiesailor.legacy \
     rpm/harbour-veggiesailor.yaml \
     pyveggiesailor/vegguide_cache.py \
-    qml/pages/EntryMap.qml
+    qml/pages/EntryMap.qml \
+    qml/pages/EntryBackgroundItem.qml \
+
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -49,6 +51,9 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-veggiesailor-de.ts
+TRANSLATIONS += translations/harbour-veggiesailor-fr.ts
+
+
 
 RESOURCES += \
     images.qrc

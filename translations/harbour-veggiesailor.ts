@@ -28,6 +28,27 @@
     </message>
 </context>
 <context>
+    <name>Entries</name>
+    <message>
+        <location filename="../qml/pages/Entries.qml" line="94"/>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EntryMap</name>
+    <message>
+        <location filename="../qml/pages/EntryMap.qml" line="34"/>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EntryMap.qml" line="40"/>
+        <source>Phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Fav</name>
     <message>
         <location filename="../qml/pages/Fav.qml" line="33"/>
@@ -91,27 +112,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="133"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="134"/>
+        <source>Phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PlaceInfo.qml" line="139"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="138"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="144"/>
         <source>Price Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="143"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="149"/>
         <source>Hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="148"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="154"/>
         <source>Cuisines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="152"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="158"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
