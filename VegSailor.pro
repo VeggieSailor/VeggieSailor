@@ -19,7 +19,6 @@ SOURCES += src/VegSailor.cpp
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/VegSailor.spec \
     translations/*.ts \
     qml/cover/VegSailor.png \
