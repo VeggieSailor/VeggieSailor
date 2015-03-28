@@ -10,12 +10,19 @@ Page {
         if (page.status==PageStatus.Active)
         {
             placesModel.clear();
+            citiesModel.clear();
+
 
     py.call('pyveggiesailor.controller.fav_places', [],function(result) {
         for (var i=0; i<result.length; i++) {
             placesModel.append(result[i]);
         }
     });
+            py.call('pyveggiesailor.controller.fav_cities', [],function(result) {
+                for (var i=0; i<result.length; i++) {
+                    citiesModel.append(result[i]);
+                }
+            });
         }
 
     }
@@ -76,6 +83,8 @@ Page {
                             });
 
                         }
+
+
                         Rectangle {
                             width: Theme.paddingSmall
                             radius: Math.round(height/3)
@@ -112,7 +121,6 @@ Page {
 
                     }
                 }
-                /* // Commented since model does not work yet
                 Label {
                     text: qsTr("Cities")
                     color: Theme.highlightColor
@@ -124,14 +132,21 @@ Page {
                 Repeater {
                     id: repCities
                     model: ListModel {
-
+                        id: citiesModel
                     }
                     delegate: BackgroundItem {
                         id: bgdCity
                         height: Theme.itemSizeSmall
+                        function openCity(cityUri, cityName) {
+                            pageStack.push(Qt.resolvedUrl("Entries.qml"),
+                                            {
+                                                "uri": cityUri,
+                                                "mytext":name
+                                            });
+                        }
 
                         Label {
-                            text: fruit
+                            text: name
                             x: Theme.paddingLarge
                             color: bgdCity.highlighted ? Theme.highlightColor : Theme.primaryColor
                             anchors {
@@ -142,20 +157,20 @@ Page {
                                 verticalCenter: parent.verticalCenter
                             }
                         }
-                        onClicked: openCity(index)
+                        onClicked: openCity(uri, name)
 
                     }
                 }
-                */
                 Python {
                     id: py
                     Component.onCompleted: {
                         addImportPath(Qt.resolvedUrl('.'));
                         addImportPath(Qt.resolvedUrl('..'));
                         addImportPath(Qt.resolvedUrl('../..'));
-                        importModule('listmodel', function(result) {
-                            placesModel.clear();
-                        });
+
+                           importModule('pyveggiesailor.controller', function () {
+                           });
+
                     }
 
 

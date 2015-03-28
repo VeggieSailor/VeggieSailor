@@ -30,7 +30,18 @@
 <context>
     <name>Entries</name>
     <message>
-        <location filename="../qml/pages/Entries.qml" line="94"/>
+        <location filename="../qml/pages/Entries.qml" line="22"/>
+        <location filename="../qml/pages/Entries.qml" line="34"/>
+        <source>Add to favorites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Entries.qml" line="30"/>
+        <source>Remove from favorites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Entries.qml" line="115"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -51,13 +62,18 @@
 <context>
     <name>Fav</name>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="33"/>
+        <location filename="../qml/pages/Fav.qml" line="40"/>
         <source>Favourites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="42"/>
+        <location filename="../qml/pages/Fav.qml" line="49"/>
         <source>Places</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Fav.qml" line="125"/>
+        <source>Cities</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

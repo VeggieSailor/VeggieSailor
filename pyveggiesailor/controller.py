@@ -129,21 +129,41 @@ def get_entries(uri):
     results = [ adjust_entry(x) for x in results ]
     return results
 
+def fav_city_check(uri):
+    """Check is place is favorite.
+    """
+    return veggiesailor.StorageFav().exists(uri)
+
+
 def fav_place_check(uri):
     """Check is place is favorite.
     """
     return veggiesailor.StorageFav().exists(uri)
+
+def fav_city(uri, data={}):
+    """Switch favorite status of the place.
+    """
+    sv = veggiesailor.StorageFav()
+    return sv.switch(uri, 0, data)
 
 def fav_place(uri, data={}):
     """Switch favorite status of the place.
     """
     sv = veggiesailor.StorageFav()
     return sv.switch(uri, 1, data)
+
 def fav_places():
     """Get favorite places.
     """
     sv = veggiesailor.StorageFav()
     results = sv.get_favorites()
+    return results
+
+def fav_cities():
+    """Get favorite places.
+    """
+    sv = veggiesailor.StorageFav()
+    results = sv.get_favorites(0)
     return results
 if __name__ == "__main__":
     from  vegguide import VegGuideObject

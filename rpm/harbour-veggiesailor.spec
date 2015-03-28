@@ -31,7 +31,6 @@ BuildRequires:  desktop-file-utils
 %description
 Vegetarian / Vegan "sailing" guide.
 
-
 %prep
 %setup -q -n %{name}-%{version}
 
