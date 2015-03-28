@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[veggiesailor.veggiesailor]
+file_filter = translations/harbour-veggiesailor_<lang>.ts
+source_lang = en
+type = QT
+
