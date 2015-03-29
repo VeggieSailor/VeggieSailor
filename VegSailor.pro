@@ -39,6 +39,8 @@ OTHER_FILES += \
     pyveggiesailor/vegguide_cache.py \
     qml/pages/EntryMap.qml \
     qml/pages/EntryBackgroundItem.qml \
+    qml/pages/ChooseMinimumVegLevel.qml \
+    qml/VegLevel.js
 
 
 # to disable building translations every time, comment out the

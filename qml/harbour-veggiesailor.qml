@@ -34,6 +34,11 @@ import "pages"
 
 ApplicationWindow
 {
+    // Current state properties:
+    property int minimumVegLevel : 0
+
+
+
     initialPage: Component { FirstPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 }
