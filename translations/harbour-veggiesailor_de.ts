@@ -4,7 +4,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="37"/>
         <source>Veggie Sailor</source>
-        <translation type="unfinished"/>
+        <translation>Veggie Sailor</translation>
     </message>
 </context>
 <context>
@@ -12,17 +12,17 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="12"/>
         <source>Credits</source>
-        <translation type="unfinished"/>
+        <translation>Danksagung</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="16"/>
         <source>Veggie Sailor</source>
-        <translation type="unfinished"/>
+        <translation>Veggie Sailor</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="45"/>
         <source>If you like the app - please support us, we need developers, translators, content editors and more :)</source>
-        <translation type="unfinished"/>
+        <translation>Wenn Du die App magst - Bitte unterstüze uns, Wir brauchen Entwickler, Übersetzer, Beiträge und mehr :)</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="17"/>
         <source>Credits</source>
-        <translation type="unfinished"/>
+        <translation>Danksagung</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="21"/>
@@ -100,12 +100,12 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="43"/>
         <source>Veggie Sailor</source>
-        <translation type="unfinished"/>
+        <translation>Veggie Sailor</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="104"/>
         <source>Powered by VegGuide.org</source>
-        <translation type="unfinished"/>
+        <translation>Inhalt wird von VegGuide.org bereit gestelt.</translation>
     </message>
 </context>
 <context>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="107"/>
         <source>Veg Level</source>
-        <translation type="unfinished"/>
+        <translation>Veg Niveau</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
@@ -154,19 +154,6 @@
         <location filename="../qml/pages/PlaceInfo.qml" line="158"/>
         <source>Tags</source>
         <translation>Tags</translation>
-    </message>
-</context>
-<context>
-    <name>SecondPage</name>
-    <message>
-        <location filename="../qml/pages/SecondPage.qml" line="42"/>
-        <source>Nested Page</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../qml/pages/SecondPage.qml" line="49"/>
-        <source>Item</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
