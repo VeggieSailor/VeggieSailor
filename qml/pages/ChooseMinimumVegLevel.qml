@@ -27,7 +27,7 @@ SilicaListView {
         }
     }
     header: PageHeader {
-        title: qsTr("Minium Veggie-Level")
+        title: qsTr("Minimum Veggie-Level")
     }
 
     delegate: BackgroundItem {
