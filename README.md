@@ -25,4 +25,8 @@ We are using Transifex as our translation platform, project [VeggieSailor](https
 
 * Open Repos https://openrepos.net/content/bluszcz/veggie-sailor
 
-Jolla Harbour is on the roadmap - aiming as 1.0 release.
+### Roadmap 
+
+* 1.0 Harbour release
+* 2.0 Tablet release
+
