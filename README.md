@@ -3,6 +3,26 @@ Veggie Sailor
 
 Vegetetarian sailing for SailfishOS users.
 
-Author: Rafał [bluszcz](https://bluszcz.net) Zawadzki 
+### Project Website
 
-Powered by [VegGuide.org](http://www.vegguide.org/ "VegGuide.org").
+#### Veggie Sailor https://veggiesailor.com/
+
+### Credits
+
+* [Rafał](https://github.com/bluszcz/) [bluszcz](https://bluszcz.net) [Zawadzki](https://github.com/bluszcz/) - author, architect and main developer,
+* [Florian Wittman](https://github.com/florianwittmann) - developer, translations Transifex manager, overall project help, 
+* [VegGuide.org](http://www.vegguide.org/ "VegGuide.org") - vegetarian / vegan open data platform with nice API - foundation of the Veggie Sailor project.
+
+### Translations
+
+We are using Transifex as our translation platform, project [VeggieSailor](https://www.transifex.com/projects/p/veggiesailor/language/pt/) - you are more than welcome to help with the translations to your language.
+
+### Build platform
+
+* https://build.merproject.org/package/show/home:bluszcz/veggiesailor
+
+### Download 
+
+* Open Repos https://openrepos.net/content/bluszcz/veggie-sailor
+
+Jolla Harbour is on the roadmap - aiming as 1.0 release.
