@@ -1,5 +1,6 @@
-EntryBackgroundItem {
-    property string name
+import QtQuick 2.0
+import Sailfish.Silica 1.0
+BackgroundItem {
     height: Theme.itemSizeMedium
     anchors {
         left: parent.left
@@ -17,7 +18,7 @@ EntryBackgroundItem {
             left: parent.left
             topMargin: Theme.paddingSmall/2
             bottomMargin: Theme.paddingSmall/2
-            leftMargin: -width/2
+            leftMargin: - width/2
         }
     }
     Column {
@@ -42,7 +43,6 @@ EntryBackgroundItem {
                 color: highlighted ? Theme.highlightColor : Theme.secondaryColor
                 font.pixelSize: Theme.fontSizeSmall
                 width: parent.width - (Theme.fontSizeSmall * rating_parsed)
-
             }
             Repeater {
                 id: repeater
@@ -55,10 +55,8 @@ EntryBackgroundItem {
                     source: "image://theme/icon-m-favorite-selected"
                     height: Theme.fontSizeSmall
                     width: Theme.fontSizeSmall
-
                 }
             }
-
         }
     }
 

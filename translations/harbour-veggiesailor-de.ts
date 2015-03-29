@@ -40,11 +40,6 @@
         <source>Remove from favorites</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../qml/pages/Entries.qml" line="115"/>
-        <source>Unknown</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>EntryMap</name>
