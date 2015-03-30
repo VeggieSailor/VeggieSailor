@@ -1,5 +1,13 @@
 <?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.1">
 <context>
+    <name>ChooseMinimumVegLevel</name>
+    <message>
+        <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="30"/>
+        <source>Minimum Veggie-Level</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="37"/>
@@ -28,19 +36,24 @@
 <context>
     <name>Entries</name>
     <message>
-        <location filename="../qml/pages/Entries.qml" line="22"/>
-        <location filename="../qml/pages/Entries.qml" line="34"/>
+        <location filename="../qml/pages/Entries.qml" line="23"/>
+        <location filename="../qml/pages/Entries.qml" line="35"/>
         <source>Add to favorites</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../qml/pages/Entries.qml" line="30"/>
+        <location filename="../qml/pages/Entries.qml" line="31"/>
         <source>Remove from favorites</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../qml/pages/Entries.qml" line="115"/>
-        <source>Unknown</source>
+        <location filename="../qml/pages/Entries.qml" line="43"/>
+        <source>Minimum Veggie-Level</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/Entries.qml" line="56"/>
+        <source>At least %1</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -153,6 +166,39 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="158"/>
         <source>Tags</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>VegLevel</name>
+    <message>
+        <location filename="../qml/VegLevel.js" line="3"/>
+        <source>Show all</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/VegLevel.js" line="4"/>
+        <source>Vegetarian-Friendly</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/VegLevel.js" line="5"/>
+        <source>Vegan-Friendly</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/VegLevel.js" line="6"/>
+        <source>Vegetarian (But Not Vegan-Friendly)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/VegLevel.js" line="7"/>
+        <source>Vegetarian</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/VegLevel.js" line="8"/>
+        <source>Vegan</source>
         <translation type="unfinished"/>
     </message>
 </context>

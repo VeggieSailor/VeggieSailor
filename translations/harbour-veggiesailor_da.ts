@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="da" version="2.1">
 <context>
     <name>ChooseMinimumVegLevel</name>
     <message>
@@ -12,7 +12,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="37"/>
         <source>Veggie Sailor</source>
-        <translation>Wege  Żeglarz</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -20,17 +20,17 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="12"/>
         <source>Credits</source>
-        <translation>Autorzy programu</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="16"/>
         <source>Veggie Sailor</source>
-        <translation>Wege  Żeglarz</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="45"/>
         <source>If you like the app - please support us, we need developers, translators, content editors and more :)</source>
-        <translation>Jeśli lubisz tą aplikację - pomoż nam :) potrzebujemy programistów i tłumaczy - ale również kontent edytorów.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -39,12 +39,12 @@
         <location filename="../qml/pages/Entries.qml" line="23"/>
         <location filename="../qml/pages/Entries.qml" line="35"/>
         <source>Add to favorites</source>
-        <translation>Dodaj do ulubionych</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="31"/>
         <source>Remove from favorites</source>
-        <translation>Usuń z ulubionych</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="43"/>
@@ -62,12 +62,12 @@
     <message>
         <location filename="../qml/pages/EntryMap.qml" line="34"/>
         <source>Address</source>
-        <translation>Adres</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/EntryMap.qml" line="40"/>
         <source>Phone</source>
-        <translation>Telefon</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -75,17 +75,17 @@
     <message>
         <location filename="../qml/pages/Fav.qml" line="40"/>
         <source>Favourites</source>
-        <translation>Ulubione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Fav.qml" line="49"/>
         <source>Places</source>
-        <translation>Miejsca</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Fav.qml" line="125"/>
         <source>Cities</source>
-        <translation>Miasta</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -93,32 +93,32 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="12"/>
         <source>Clear cache</source>
-        <translation>Wyczyść pamięć podręczną</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="17"/>
         <source>Credits</source>
-        <translation>Autorzy programu</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="21"/>
         <source>Sail</source>
-        <translation>Żegluj</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="25"/>
         <source>Favorites</source>
-        <translation>Ulubione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="43"/>
         <source>Veggie Sailor</source>
-        <translation>Wege  Żeglarz</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="104"/>
         <source>Powered by VegGuide.org</source>
-        <translation>Używamy VegGuide.org API</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -126,47 +126,47 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="38"/>
         <source>Add to favorites</source>
-        <translation>Dodaj do ulubionych</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="107"/>
         <source>Veg Level</source>
-        <translation>Wege poziom</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
         <source>Address</source>
-        <translation>Adres</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="134"/>
         <source>Phone</source>
-        <translation>Telefon</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="139"/>
         <source>Description</source>
-        <translation>Opis</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="144"/>
         <source>Price Range</source>
-        <translation>Zakres cenowy</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="149"/>
         <source>Hours</source>
-        <translation>Godziny</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="154"/>
         <source>Cuisines</source>
-        <translation>Kuchnie</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="158"/>
         <source>Tags</source>
-        <translation>Tagi</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
