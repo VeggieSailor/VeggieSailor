@@ -5,7 +5,7 @@
     <name>ChooseMinimumVegLevel</name>
     <message>
         <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="30"/>
-        <source>Minium Veggie-Level</source>
+        <source>Minimum Veggie-Level</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
