@@ -1,7 +1,7 @@
 Veggie Sailor
 -------------
 
-Vegetetarian sailing for SailfishOS users.
+Vegetarian sailing for SailfishOS users.
 
 ### Project Website
 
