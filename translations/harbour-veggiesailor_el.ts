@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.1">
 <context>
     <name>ChooseMinimumVegLevel</name>
     <message>
@@ -20,7 +20,7 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="12"/>
         <source>Credits</source>
-        <translation>Créditos </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="16"/>
@@ -39,7 +39,7 @@
         <location filename="../qml/pages/Entries.qml" line="23"/>
         <location filename="../qml/pages/Entries.qml" line="35"/>
         <source>Add to favorites</source>
-        <translation>Adicionar a favoritos </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="31"/>
