@@ -4,7 +4,7 @@
     <message>
         <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="30"/>
         <source>Minimum Veggie-Level</source>
-        <translation type="unfinished"/>
+        <translation>Ελάχιστο Επίπεδο-Χορτοφάγιας</translation>
     </message>
 </context>
 <context>
@@ -12,7 +12,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="37"/>
         <source>Veggie Sailor</source>
-        <translation type="unfinished"/>
+        <translation>Veggie Sailor</translation>
     </message>
 </context>
 <context>
@@ -20,17 +20,17 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="12"/>
         <source>Credits</source>
-        <translation type="unfinished"/>
+        <translation>Συντελεστές</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="16"/>
         <source>Veggie Sailor</source>
-        <translation type="unfinished"/>
+        <translation>Veggie Sailor</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="45"/>
         <source>If you like the app - please support us, we need developers, translators, content editors and more :)</source>
-        <translation type="unfinished"/>
+        <translation>Αν σας αρέσει η εφαρμογή - παρακαλώ να μας υποστηρίξετε, χρειαζόμαστε προγραμματιστές, μεταφραστές, εκδότες περιεχομένου και περισσότερα :)</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
         <location filename="../qml/pages/Entries.qml" line="23"/>
         <location filename="../qml/pages/Entries.qml" line="35"/>
         <source>Add to favorites</source>
-        <translation type="unfinished"/>
+        <translation>Προσθήκη στα αγαπημένα</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="31"/>
         <source>Remove from favorites</source>
-        <translation type="unfinished"/>
+        <translation>Αφαίρεση από τα αγαπημένα</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="43"/>
         <source>Minimum Veggie-Level</source>
-        <translation type="unfinished"/>
+        <translation>Ελάχιστο Επίπεδο-Χορτοφάγιας</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="56"/>
         <source>At least %1</source>
-        <translation type="unfinished"/>
+        <translation>Τουλάχιστον %1</translation>
     </message>
 </context>
 <context>
@@ -62,12 +62,12 @@
     <message>
         <location filename="../qml/pages/EntryMap.qml" line="34"/>
         <source>Address</source>
-        <translation type="unfinished"/>
+        <translation>Διεύθυνση</translation>
     </message>
     <message>
         <location filename="../qml/pages/EntryMap.qml" line="40"/>
         <source>Phone</source>
-        <translation type="unfinished"/>
+        <translation>Τηλέφωνο</translation>
     </message>
 </context>
 <context>
@@ -75,17 +75,17 @@
     <message>
         <location filename="../qml/pages/Fav.qml" line="40"/>
         <source>Favourites</source>
-        <translation type="unfinished"/>
+        <translation>Αγαπημένα</translation>
     </message>
     <message>
         <location filename="../qml/pages/Fav.qml" line="49"/>
         <source>Places</source>
-        <translation type="unfinished"/>
+        <translation>Μέρη</translation>
     </message>
     <message>
         <location filename="../qml/pages/Fav.qml" line="125"/>
         <source>Cities</source>
-        <translation type="unfinished"/>
+        <translation>Πόλεις</translation>
     </message>
 </context>
 <context>
@@ -93,32 +93,32 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="12"/>
         <source>Clear cache</source>
-        <translation type="unfinished"/>
+        <translation>Εκκαθάριση προσωρινής μνήμης</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="17"/>
         <source>Credits</source>
-        <translation type="unfinished"/>
+        <translation>Συντελεστές</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="21"/>
         <source>Sail</source>
-        <translation type="unfinished"/>
+        <translation>Ιστίο</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="25"/>
         <source>Favorites</source>
-        <translation type="unfinished"/>
+        <translation>Αγαπημένα</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="43"/>
         <source>Veggie Sailor</source>
-        <translation type="unfinished"/>
+        <translation>Veggie Sailor</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="104"/>
         <source>Powered by VegGuide.org</source>
-        <translation type="unfinished"/>
+        <translation>Τροφοδοτείται από to VegGuide.org</translation>
     </message>
 </context>
 <context>
@@ -126,47 +126,47 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="38"/>
         <source>Add to favorites</source>
-        <translation type="unfinished"/>
+        <translation>Προσθήκη στα αγαπημένα</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="107"/>
         <source>Veg Level</source>
-        <translation type="unfinished"/>
+        <translation>Επίπεδο Χορτοφάγιας</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
         <source>Address</source>
-        <translation type="unfinished"/>
+        <translation>Διεύθυνση</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="134"/>
         <source>Phone</source>
-        <translation type="unfinished"/>
+        <translation>Τηλέφωνο</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="139"/>
         <source>Description</source>
-        <translation type="unfinished"/>
+        <translation>Περιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="144"/>
         <source>Price Range</source>
-        <translation type="unfinished"/>
+        <translation>Εύρος Τιμών</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="149"/>
         <source>Hours</source>
-        <translation type="unfinished"/>
+        <translation>Ωράριο</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="154"/>
         <source>Cuisines</source>
-        <translation type="unfinished"/>
+        <translation>Κουζίνα</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="158"/>
         <source>Tags</source>
-        <translation type="unfinished"/>
+        <translation>Ετικέτες</translation>
     </message>
 </context>
 <context>
@@ -174,32 +174,32 @@
     <message>
         <location filename="../qml/VegLevel.js" line="3"/>
         <source>Show all</source>
-        <translation type="unfinished"/>
+        <translation>Εμφάνιση όλων</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="4"/>
         <source>Vegetarian-Friendly</source>
-        <translation type="unfinished"/>
+        <translation>Φιλικό για Χορτοφάγους</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="5"/>
         <source>Vegan-Friendly</source>
-        <translation type="unfinished"/>
+        <translation>Φιλικό για Χορτοφάγους</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="6"/>
         <source>Vegetarian (But Not Vegan-Friendly)</source>
-        <translation type="unfinished"/>
+        <translation>Για χορτοφάγους (αλλά όχι για vegan)</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="7"/>
         <source>Vegetarian</source>
-        <translation type="unfinished"/>
+        <translation>Χορτοφάγοι</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="8"/>
         <source>Vegan</source>
-        <translation type="unfinished"/>
+        <translation>Vegan</translation>
     </message>
 </context>
 </TS>

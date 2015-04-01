@@ -12,7 +12,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="37"/>
         <source>Veggie Sailor</source>
-        <translation>Marin Végétarien</translation>
+        <translation>Veggie Sailor</translation>
     </message>
 </context>
 <context>
@@ -25,7 +25,7 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="16"/>
         <source>Veggie Sailor</source>
-        <translation>Marin Végétarien</translation>
+        <translation>Veggie Sailor</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="45"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="43"/>
         <source>Veggie Sailor</source>
-        <translation>Le Marin Végétarien</translation>
+        <translation>Veggie Sailor</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="104"/>

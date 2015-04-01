@@ -4,7 +4,7 @@
     <message>
         <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="30"/>
         <source>Minimum Veggie-Level</source>
-        <translation type="unfinished"/>
+        <translation>Nível mínimo veg</translation>
     </message>
 </context>
 <context>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../qml/pages/Entries.qml" line="43"/>
         <source>Minimum Veggie-Level</source>
-        <translation type="unfinished"/>
+        <translation>Nível mínimo veg</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="56"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="21"/>
         <source>Sail</source>
-        <translation type="unfinished"/>
+        <translation>Navegar</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="25"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="107"/>
         <source>Veg Level</source>
-        <translation type="unfinished"/>
+        <translation>Nível veg</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
@@ -146,7 +146,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="139"/>
         <source>Description</source>
-        <translation type="unfinished"/>
+        <translation>Descrição</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="144"/>
@@ -179,12 +179,12 @@
     <message>
         <location filename="../qml/VegLevel.js" line="4"/>
         <source>Vegetarian-Friendly</source>
-        <translation>Vegetarian-Friendly</translation>
+        <translation>Amigáveis para vegetarianos </translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="5"/>
         <source>Vegan-Friendly</source>
-        <translation>Vegan-Friendly</translation>
+        <translation>Amigáveis para veganos </translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="6"/>
@@ -194,12 +194,12 @@
     <message>
         <location filename="../qml/VegLevel.js" line="7"/>
         <source>Vegetarian</source>
-        <translation type="unfinished"/>
+        <translation>Vegetariano</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="8"/>
         <source>Vegan</source>
-        <translation type="unfinished"/>
+        <translation>Vegano</translation>
     </message>
 </context>
 </TS>
