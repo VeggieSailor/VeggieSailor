@@ -78,7 +78,7 @@ Page {
                         thumb.source = res;
                     });
 
-                    })
+                })
 
 
             }
@@ -95,12 +95,12 @@ Page {
             }
 
 
-                Image {
-                    id:thumb
-                    x: Theme.paddingLarge
-                    anchors.horizontalCenter: parent.horizontalCenter
+            Image {
+                id:thumb
+                x: Theme.paddingLarge
+                anchors.horizontalCenter: parent.horizontalCenter
 
-                }
+            }
 
 
             DetailItem {
@@ -110,24 +110,44 @@ Page {
 
 
 
-            Row {
+            Item {
+                id:header
+                height: Theme.itemSizeMedium
+                width: parent.width
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.highlightColor
+                    opacity : mouseAreaHeader.pressed ? 0.3 : 0.1
+                }
+                Image {
+                    id: icon
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.paddingLarge
+                    source: "image://theme/icon-m-right"
+                }
+                Label {
+//                    font.pixelSize: Theme.fontSizeLarge
+                    color: Theme.primaryColor
+                    text: qsTr('Map')
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: icon.left
+                    anchors.rightMargin: Theme.paddingMedium
+                }
 
-            Image
-            {
-                anchors.right: address.left
-                id:image
-                source: "image://theme/icon-m-location"
-                height: Theme.fontSizeSmall
-                width: Theme.fontSizeSmall
+                MouseArea {
+                    id: mouseAreaHeader
+                    anchors.fill: parent
+                    onClicked:
+                    {
+                        address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
+                        address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
+                        pageStack.push(Qt.resolvedUrl("EntryMap.qml"), {"map_url":address.map_url, "name":page.name,
+                                           "address":page.address, "phone":page.phone});
+                    }
+                }
             }
 
-
-            Label {
-                text: qsTr('Address')
-
-            }
-
-            }
 
             DetailItem {
 
@@ -140,13 +160,10 @@ Page {
                     anchors.fill: parent
                     onClicked:
                     {
-                        console.log("START", page.uri);
                         address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
-                        console.log("ENTRY_ID", address.entry_id);
                         address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
-                        console.log("MY PAGE:",address.map_url);
                         pageStack.push(Qt.resolvedUrl("EntryMap.qml"), {"map_url":address.map_url, "name":page.name,
-                                       "address":page.address, "phone":page.phone});
+                                           "address":page.address, "phone":page.phone});
                     }
 
                 }
@@ -155,6 +172,34 @@ Page {
             DetailItem {
                 label: qsTr('Phone')
                 value: qsTr(page.phone)
+            }
+
+            Item {
+                id:headerInformations
+                height: Theme.itemSizeMedium
+                width: parent.width
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.highlightColor
+                    opacity : 0.1
+                }
+                Image {
+                    id: iconInformations
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.paddingLarge
+                    source: "image://theme/icon-lock-information"
+                }
+                Label {
+//                    font.pixelSize: Theme.fontSizeLarge
+                    color: Theme.primaryColor
+                    text: qsTr('Informations')
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: iconInformations.left
+                    anchors.rightMargin: Theme.paddingMedium
+                }
+
+
             }
 
             DetailItem {
@@ -180,8 +225,47 @@ Page {
                 label: qsTr('Tags')
                 value: qsTr(page.tags_txt)
             }
-}
 
+//            Item {
+//                id:headerReviews
+//                height: Theme.itemSizeMedium
+//                width: parent.width
+//                Rectangle {
+//                    anchors.fill: parent
+//                    color: Theme.highlightColor
+//                    opacity : mouseAreaHeaderReviews.pressed ? 0.3 : 0.1
+//                }
+//                Image {
+//                    id: iconReviews
+//                    anchors.verticalCenter: parent.verticalCenter
+//                    anchors.right: parent.right
+//                    anchors.rightMargin: Theme.paddingLarge
+//                    source: "image://theme/icon-m-right"
+//                }
+//                Label {
+////                    font.pixelSize: Theme.fontSizeLarge
+//                    color: Theme.primaryColor
+//                    text: qsTr('Reviews')
+//                    anchors.verticalCenter: parent.verticalCenter
+//                    anchors.right: iconReviews.left
+//                    anchors.rightMargin: Theme.paddingMedium
+//                }
+
+//                MouseArea {
+//                    id: mouseAreaHeaderReviews
+
+//                    anchors.fill: parent
+//                    onClicked:
+//                    {
+//                        address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
+//                        address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
+//                        pageStack.push(Qt.resolvedUrl("Reviews.qml"), {"map_url":address.map_url, "name":page.name,
+//                                           "address":page.address, "phone":page.phone});
+//                    }
+//                }
+//            }
         }
+
     }
+}
 
