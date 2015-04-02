@@ -108,7 +108,29 @@ Page {
                 value: qsTr(page.veg_level_description)
             }
 
+
+
+            Row {
+
+            Image
+            {
+                anchors.right: address.left
+                id:image
+                source: "image://theme/icon-m-location"
+                height: Theme.fontSizeSmall
+                width: Theme.fontSizeSmall
+            }
+
+
+            Label {
+                text: qsTr('Address')
+
+            }
+
+            }
+
             DetailItem {
+
                 id: address
                 property int entry_id
                 property string map_url
