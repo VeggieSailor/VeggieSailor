@@ -20,7 +20,7 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="12"/>
         <source>Credits</source>
-        <translation>Poäng</translation>
+        <translation>Tack</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="16"/>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="17"/>
         <source>Credits</source>
-        <translation>Poäng</translation>
+        <translation>Tack</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="21"/>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../qml/VegLevel.js" line="6"/>
         <source>Vegetarian (But Not Vegan-Friendly)</source>
-        <translation>Vegetarian- (dock inte vegan-)vänligt</translation>
+        <translation>Vegetariskt (dock inte veganvänligt)</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="7"/>
