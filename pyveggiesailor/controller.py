@@ -208,12 +208,12 @@ if __name__ == "__main__":
     giblartar = VGOCache('https://www.vegguide.org/region/2236')
 
 
-    bcn = VGOCache('https://www.vegguide.org/entry/14683')
+    bcn = VGOCache('http://www.vegguide.org/entry/12190')
     bar  = VGOCache('https://www.vegguide.org/entry/12300')
 
     reviews = get_reviews('http://www.vegguide.org/entry/12190/reviews')
 
-    p.pprint(reviews)
+    p.pprint(bar.results)
 
 #    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
 #    print(get_entry_image('http://www.vegguide.org/entry/20647'))

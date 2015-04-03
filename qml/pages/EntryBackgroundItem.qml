@@ -64,6 +64,7 @@ BackgroundItem {
     {
         "uri":uri,"name":typeof name != 'undefined' ? name : '',
         "address1":typeof address1 != 'undefined' ? address1 : '',
+        "phone":phone,"name":typeof phone != 'undefined' ? phone : '',
         "address2":typeof address2 != 'undefined' ? address2 : '',
         "city":typeof city != 'undefined' ? city : '',
         "country":typeof country != 'undefined' ? country : '',
