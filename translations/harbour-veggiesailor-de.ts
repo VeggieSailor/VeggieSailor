@@ -187,14 +187,6 @@
     </message>
 </context>
 <context>
-    <name>Reviews</name>
-    <message>
-        <location filename="../qml/pages/Reviews.qml" line="26"/>
-        <source>At least %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>VegLevel</name>
     <message>
         <location filename="../qml/VegLevel.js" line="3"/>

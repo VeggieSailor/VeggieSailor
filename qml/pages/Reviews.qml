@@ -23,7 +23,6 @@ Page {
         }
         header: PageHeader {
             title: qsTr(page.name)
-            description: minimumVegLevel == 0 ? "" : qsTr("At least %1").arg(VegLevel.VegLevel[minimumVegLevel])
         }
 
         delegate: ListItem {

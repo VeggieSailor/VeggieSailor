@@ -83,7 +83,7 @@
         <translation>Místa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="125"/>
+        <location filename="../qml/pages/Fav.qml" line="95"/>
         <source>Cities</source>
         <translation>Města</translation>
     </message>
@@ -124,49 +124,72 @@
 <context>
     <name>PlaceInfo</name>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="38"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="42"/>
         <source>Add to favorites</source>
         <translation>Přidat do oblíbených</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="107"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
         <source>Veg Level</source>
         <translation>Vegetariánská úroveň</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
+        <source>Map</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/PlaceInfo.qml" line="165"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="134"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="181"/>
         <source>Phone</source>
         <translation>Telefon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="139"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="204"/>
+        <source>Informations</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/PlaceInfo.qml" line="214"/>
         <source>Description</source>
         <translation>Popis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="144"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="219"/>
         <source>Price Range</source>
         <translation>Cenové rozpětí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="149"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="224"/>
         <source>Hours</source>
         <translation>Hodiny</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="154"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="229"/>
         <source>Cuisines</source>
         <translation>Kuchyně</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="158"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="233"/>
         <source>Tags</source>
         <translation>Značky</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PlaceInfo.qml" line="256"/>
+        <source>Reviews</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>Reviews</name>
+    <message>
+        <location filename="../qml/pages/Reviews.qml" line="26"/>
+        <source>At least %1</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
