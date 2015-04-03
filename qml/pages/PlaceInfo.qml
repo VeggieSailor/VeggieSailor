@@ -258,10 +258,6 @@ Page {
                     anchors.fill: parent
                     onClicked:
                     {
-                        console.log("NEW URL", page.uri, page.uri_reviews);
-
-                        address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
-                        address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
                         pageStack.push(Qt.resolvedUrl("Reviews.qml"), {"uri":page.uri_reviews, "name":page.name});
                     }
                 }
