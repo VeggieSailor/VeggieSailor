@@ -5,6 +5,7 @@ import io.thp.pyotherside 1.3
 Page {
     id: page
     property string uri
+    property string uri_reviews
     property string name
     property string address1
     property string address2
@@ -26,6 +27,7 @@ Page {
     property int key_type: 1
 
     address: address1 + " " + address2 + " " + city + " " + country
+    uri_reviews: uri + "/reviews"
     SilicaFlickable {
         width: page.width
         height: parent.width
@@ -226,44 +228,44 @@ Page {
                 value: qsTr(page.tags_txt)
             }
 
-//            Item {
-//                id:headerReviews
-//                height: Theme.itemSizeMedium
-//                width: parent.width
-//                Rectangle {
-//                    anchors.fill: parent
-//                    color: Theme.highlightColor
-//                    opacity : mouseAreaHeaderReviews.pressed ? 0.3 : 0.1
-//                }
-//                Image {
-//                    id: iconReviews
-//                    anchors.verticalCenter: parent.verticalCenter
-//                    anchors.right: parent.right
-//                    anchors.rightMargin: Theme.paddingLarge
-//                    source: "image://theme/icon-m-right"
-//                }
-//                Label {
-////                    font.pixelSize: Theme.fontSizeLarge
-//                    color: Theme.primaryColor
-//                    text: qsTr('Reviews')
-//                    anchors.verticalCenter: parent.verticalCenter
-//                    anchors.right: iconReviews.left
-//                    anchors.rightMargin: Theme.paddingMedium
-//                }
+            Item {
+                id:headerReviews
+                height: Theme.itemSizeMedium
+                width: parent.width
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.highlightColor
+                    opacity : mouseAreaHeaderReviews.pressed ? 0.3 : 0.1
+                }
+                Image {
+                    id: iconReviews
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.paddingLarge
+                    source: "image://theme/icon-m-right"
+                }
+                Label {
+//                    font.pixelSize: Theme.fontSizeLarge
+                    color: Theme.primaryColor
+                    text: qsTr('Reviews')
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: iconReviews.left
+                    anchors.rightMargin: Theme.paddingMedium
+                }
 
-//                MouseArea {
-//                    id: mouseAreaHeaderReviews
+                MouseArea {
+                    id: mouseAreaHeaderReviews
+                    anchors.fill: parent
+                    onClicked:
+                    {
+                        console.log("NEW URL", page.uri, page.uri_reviews);
 
-//                    anchors.fill: parent
-//                    onClicked:
-//                    {
-//                        address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
-//                        address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
-//                        pageStack.push(Qt.resolvedUrl("Reviews.qml"), {"map_url":address.map_url, "name":page.name,
-//                                           "address":page.address, "phone":page.phone});
-//                    }
-//                }
-//            }
+                        address.entry_id =  page.uri.split('/')[(page.uri.split('/')).length-1];
+                        address.map_url = "https://veggiesailor.com/transformer/entry/"+address.entry_id+"/map";
+                        pageStack.push(Qt.resolvedUrl("Reviews.qml"), {"uri":page.uri_reviews, "name":page.name});
+                    }
+                }
+            }
         }
 
     }

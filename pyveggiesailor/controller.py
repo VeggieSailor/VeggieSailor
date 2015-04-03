@@ -128,6 +128,34 @@ def get_entries(uri):
 
     results = [ adjust_entry(x) for x in results ]
     return results
+import re
+d = re.compile('.*.org/.*/user-images/(12641)-small.png')
+
+
+
+def get_reviews(uri):
+    """Gets reviews.
+
+    Paramters
+    ---------
+    uri : str
+    """
+    results = VGOCache(uri).results
+
+    for i in range(0,len(results)):
+        try:
+            image_url = results[i]['user']['image']['files'][0]['uri']
+            image_id = d.findall(image_url)[0]
+            results[i]['user_image'] = 'http://www.vegguide.org/user-images/%s-small.png' % image_id
+
+
+        except KeyError:
+            results[i]['user_image'] = ''
+        results[i]['rating'] = int(results[i]['rating'])
+        results[i]['rating_empty'] = 5 - results[i]['rating']
+
+
+    return results
 
 def fav_city_check(uri):
     """Check is place is favorite.
@@ -183,8 +211,11 @@ if __name__ == "__main__":
     bcn = VGOCache('https://www.vegguide.org/entry/14683')
     bar  = VGOCache('https://www.vegguide.org/entry/12300')
 
+    reviews = get_reviews('http://www.vegguide.org/entry/12190/reviews')
 
-    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
+    p.pprint(reviews)
+
+#    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
 #    print(get_entry_image('http://www.vegguide.org/entry/20647'))
 
 #    print(get_entries('http://www.vegguide.org/region/583'))

@@ -40,7 +40,8 @@ OTHER_FILES += \
     qml/pages/EntryMap.qml \
     qml/pages/EntryBackgroundItem.qml \
     qml/pages/ChooseMinimumVegLevel.qml \
-    qml/VegLevel.js
+    qml/VegLevel.js \
+    qml/pages/Reviews.qml
 
 
 # to disable building translations every time, comment out the
