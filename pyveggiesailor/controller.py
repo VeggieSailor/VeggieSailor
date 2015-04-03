@@ -66,7 +66,7 @@ def adjust_entry(entry):
 
 def get_entry(uri):
     entry = VGOCache(uri)
-    return entry.results
+    return adjust_entry(entry.results)
 
 def get_entry_image(uri):
     """Fetch main image for the entry.

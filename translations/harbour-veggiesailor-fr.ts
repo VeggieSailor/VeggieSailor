@@ -85,7 +85,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="125"/>
+        <location filename="../qml/pages/Fav.qml" line="95"/>
         <source>Cities</source>
         <translation type="unfinished"></translation>
     </message>
@@ -126,62 +126,62 @@
 <context>
     <name>PlaceInfo</name>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="40"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="42"/>
         <source>Add to favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="109"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
         <source>Veg Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="134"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
         <source>Map</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="159"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="165"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="175"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="181"/>
         <source>Phone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="198"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="204"/>
         <source>Informations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="208"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="214"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="213"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="219"/>
         <source>Price Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="218"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="224"/>
         <source>Hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="223"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="229"/>
         <source>Cuisines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="227"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="233"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="250"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="256"/>
         <source>Reviews</source>
         <translation type="unfinished"></translation>
     </message>

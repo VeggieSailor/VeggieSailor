@@ -57,7 +57,25 @@ Page {
         }
 
         delegate: EntryBackgroundItem {
+            onClicked: pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
+            {
+                "uri":uri,"name":typeof name != 'undefined' ? name : '',
+                "address1":typeof address1 != 'undefined' ? address1 : '',
+                "phone":phone,"phone":typeof phone != 'undefined' ? phone : '',
+                "address2":typeof address2 != 'undefined' ? address2 : '',
+                "city":typeof city != 'undefined' ? city : '',
+                "country":typeof country != 'undefined' ? country : '',
+                "veg_level_description":typeof veg_level_description != 'undefined' ? veg_level_description : '',
+                "price_range":typeof price_range != 'undefined' ? price_range : '',
+                "long_description":typeof long_description != 'undefined' ? long_description : '',
+                "short_description":typeof short_description != 'undefined' ? short_description : '',
+                "hours_txt": typeof hours_txt != 'undefined' ? hours_txt : '',
+                "cuisines_txt": typeof cuisines_txt != 'undefined' ? cuisines_txt : '',
+                "tags_txt": typeof tags_txt != 'undefined' ? tags_txt : '',
+                "color_txt": typeof color_txt != 'undefined' ? color_txt : '',
+                "rating_parsed":typeof rating_parsed != 'undefined' ? rating_parsed : '',
 
+                 })
         }
 
     }

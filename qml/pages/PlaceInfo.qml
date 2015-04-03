@@ -26,6 +26,8 @@ Page {
     property string address
     property int key_type: 1
 
+    property int rating_parsed
+
     address: address1 + " " + address2 + " " + city + " " + country
     uri_reviews: uri + "/reviews"
     SilicaFlickable {
@@ -42,16 +44,20 @@ Page {
                 onClicked:
                 {
                     onClicked: {
-                        py.call('pyveggiesailor.controller.fav_place', [page.uri, {'name':page.name, 'city':page.city, 'color_txt':page.color_txt, 'uri':page.uri,'veg_level_description':page.veg_level_description}],function(result) {
-                            if (result==1)
-                            {
-                                favorite.text = "Remove from favorites";
-                            } else
+                        py.call('pyveggiesailor.controller.fav_place',
+                                [page.uri, {'name':page.name, 'city':page.city,
+                                     'color_txt':page.color_txt, "rating_parsed":page.rating_parsed,
+                                     'uri':page.uri,'veg_level_description':page.veg_level_description}],
+                                function(result) {
+                                    if (result==1)
+                                    {
+                                        favorite.text = "Remove from favorites";
+                                    } else
 
-                            {
-                                favorite.text = "Add to favorites";
-                            }
-                        });
+                                    {
+                                        favorite.text = "Add to favorites";
+                                    }
+                                });
                     }
                 }
             }
@@ -129,7 +135,7 @@ Page {
                     source: "image://theme/icon-m-right"
                 }
                 Label {
-//                    font.pixelSize: Theme.fontSizeLarge
+                    //                    font.pixelSize: Theme.fontSizeLarge
                     color: Theme.primaryColor
                     text: qsTr('Map')
                     anchors.verticalCenter: parent.verticalCenter
@@ -193,7 +199,7 @@ Page {
                     source: "image://theme/icon-lock-information"
                 }
                 Label {
-//                    font.pixelSize: Theme.fontSizeLarge
+                    //                    font.pixelSize: Theme.fontSizeLarge
                     color: Theme.primaryColor
                     text: qsTr('Informations')
                     anchors.verticalCenter: parent.verticalCenter
@@ -245,7 +251,7 @@ Page {
                     source: "image://theme/icon-m-right"
                 }
                 Label {
-//                    font.pixelSize: Theme.fontSizeLarge
+                    //                    font.pixelSize: Theme.fontSizeLarge
                     color: Theme.primaryColor
                     text: qsTr('Reviews')
                     anchors.verticalCenter: parent.verticalCenter

@@ -8,6 +8,7 @@ BackgroundItem {
     }
     // Stolen from:
     // https://github.com/mattaustin/fremantleline/blob/master/qml/silica/DepartureListPage.qml
+
     Rectangle {
         width: Theme.paddingSmall
         radius: Math.round(height/3)
@@ -60,21 +61,5 @@ BackgroundItem {
         }
     }
 
-    onClicked: pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
-    {
-        "uri":uri,"name":typeof name != 'undefined' ? name : '',
-        "address1":typeof address1 != 'undefined' ? address1 : '',
-        "phone":phone,"name":typeof phone != 'undefined' ? phone : '',
-        "address2":typeof address2 != 'undefined' ? address2 : '',
-        "city":typeof city != 'undefined' ? city : '',
-        "country":typeof country != 'undefined' ? country : '',
-        "veg_level_description":typeof veg_level_description != 'undefined' ? veg_level_description : '',
-        "price_range":typeof price_range != 'undefined' ? price_range : '',
-        "long_description":typeof long_description != 'undefined' ? long_description : '',
-        "short_description":typeof short_description != 'undefined' ? short_description : '',
-        "hours_txt": typeof hours_txt != 'undefined' ? hours_txt : '',
-        "cuisines_txt": typeof cuisines_txt != 'undefined' ? cuisines_txt : '',
-        "tags_txt": typeof tags_txt != 'undefined' ? tags_txt : '',
-        "color_txt": typeof color_txt != 'color_txt' ? tags_txt : '',
-         })
+
 }

@@ -58,11 +58,10 @@ Page {
                     model: ListModel {
                         id: placesModel
                     }
-                    delegate: BackgroundItem {
+                    delegate: EntryBackgroundItem {
                         id: bgdPlace
-                        height: Theme.itemSizeSmall
                         function openPlace(entryUri) {
-                            py.call('listmodel.get_vegguide_entry', [entryUri],function(result) {
+                            py.call('pyveggiesailor.controller.get_entry', [entryUri],function(result) {
                                 pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                               {
                                   "uri":result['uri'],
@@ -77,46 +76,17 @@ Page {
                                   "short_description": result['short_description'],
                                   "hours_txt": result['hours_txt'],
                                   "cuisines_txt": result['cuisines_txt'],
-                                  "tags_txt": result['tags_txt']
+                                  "tags_txt": result['tags_txt'],
+                                   "phone": result['phone'],
+                                    "color_txt": result['color_txt']
+
+
+
 
                               });
                             });
 
                         }
-
-
-                        Rectangle {
-                            width: Theme.paddingSmall
-                            radius: Math.round(height/3)
-                            color: color_txt
-                            anchors {
-                                top: parent.top
-                                bottom: parent.bottom
-                                left: parent.left
-                                topMargin: Theme.paddingSmall/2
-                                bottomMargin: Theme.paddingSmall/2
-                                leftMargin: -width/2
-                            }
-                        }
-                        Column {
-                            anchors {
-                                left: parent.left
-                                leftMargin: Theme.paddingLarge
-                                right: parent.right
-                                rightMargin: Theme.paddingSmall
-                                verticalCenter: parent.verticalCenter
-                            }
-                            Label {
-                                text: name
-                                color: highlighted ? Theme.highlightColor : Theme.primaryColor
-                            }
-                            Label {
-                                text: veg_level_description
-                                color: highlighted ? Theme.highlightColor : Theme.secondaryColor
-                                font.pixelSize: Theme.fontSizeSmall
-                            }
-                        }
-
                         onClicked: openPlace(uri)
 
                     }
