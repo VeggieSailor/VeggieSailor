@@ -136,7 +136,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
         <source>Map</source>
-        <translation type="unfinished"/>
+        <translation>Karte</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="165"/>
@@ -151,7 +151,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="204"/>
         <source>Informations</source>
-        <translation type="unfinished"/>
+        <translation>Informationen</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="214"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="256"/>
         <source>Reviews</source>
-        <translation type="unfinished"/>
+        <translation>Bewertungen</translation>
     </message>
 </context>
 <context>

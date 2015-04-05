@@ -136,7 +136,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
         <source>Map</source>
-        <translation type="unfinished"/>
+        <translation>Carte</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="165"/>
