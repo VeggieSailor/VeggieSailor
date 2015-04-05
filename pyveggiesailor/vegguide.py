@@ -5,12 +5,56 @@
 
 import json
 from urllib import request
+import re
 
 BASE_URL = 'https://www.vegguide.org/'
 
+
+region_regexp = re.compile(r'^https{0,1}://(www.){0,1}vegguide.org/region/(?P<source_id>\d*)/{0,1}$')
+entry_regexp = re.compile(r'^https{0,1}://(www.){0,1}vegguide.org/entry/(?P<source_id>\d*)/{0,1}$')
+reviews_regexp = re.compile(r'^https{0,1}://(www.){0,1}vegguide.org/entry/(?P<source_id>\d*)/reviews/{0,1}$')
+
 class VegGuideRequest(request.Request):
     def __init__(self, url=BASE_URL):
-        super().__init__(url, headers={'X-Requested-WIth':'XMLHttpRequest'})
+        super().__init__(url, headers={'X-Requested-With':'XMLHttpRequest'})
+
+VS_BASE_URL = "https://veggiesailor.com/transformer"
+
+class VegGuideProxyRequest(request.Request):
+    def __init__(self, uri):
+        self.uri = uri
+        self.vegguide_type = self._get_type()
+        if not self.vegguide_type['proxy_uri']:
+            self.vegguide_type['proxy_uri'] = uri
+        super().__init__(url=self.vegguide_type['proxy_uri'], headers={'X-Requested-With':'XMLHttpRequest'})
+
+    def _get_type(self):
+        if region_regexp.match(self.uri):
+            source_id = region_regexp.match(self.uri).groupdict()['source_id']
+            return {
+                'type':'region',
+                'source_id':source_id,
+                'proxy_uri':'%s/region/%s' % (VS_BASE_URL, source_id)
+                }
+        elif entry_regexp.match(self.uri):
+            source_id = entry_regexp.match(self.uri).groupdict()['source_id']
+            return {
+                'type':'entry',
+                'source_id':source_id,
+                'proxy_uri':'%s/region/%s' % (VS_BASE_URL, source_id)
+                }
+
+        elif reviews_regexp.match(self.uri):
+            source_id = reviews_regexp.match(self.uri).groupdict()['source_id']
+            return {
+                'type':'reviews',
+                'source_id':source_id,
+                'proxy_uri':'%s/entry/%s/reviews' % (VS_BASE_URL, source_id)
+                }
+        return {'type':'error','source_id':-1, 'proxy_uri':None}
+
+
+
 
 class VegGuideParser:
     def __init__(self, vegguide_request):
@@ -73,7 +117,7 @@ class RegionsTree(VegGuideTree):
 class VegGuideObject(object):
     """Basic VegGuide Object.
     """
-    def __init__(self, uri, parent=None, payload_json=None, cache_class=None):
+    def __init__(self, uri, parent=None, payload_json=None, cache_class=None, vegbasket_cache=True):
         """Initialization of the VegGuideObject
 
         Parameters
@@ -89,7 +133,10 @@ class VegGuideObject(object):
         self.parent = parent
 
         if payload_json == None:
-            req = VegGuideRequest(self.uri)
+            if vegbasket_cache:
+                req = VegGuideProxyRequest(self.uri)
+            else:
+                req = VegGuideRequest(self.uri)
             self.results =  VegGuideParser(req).result
             self.results_json = json.dumps(self.results)
         else:
@@ -110,6 +157,9 @@ class VegGuideObject(object):
 
     def __str__(self):
         return '<VegGuideObject-%s-/%s>' % (self.vgo_type,self.vgo_id)
+
+
+
 
     def is_country(self):
         try:

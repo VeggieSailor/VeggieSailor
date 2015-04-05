@@ -197,6 +197,8 @@ if __name__ == "__main__":
     from  vegguide import VegGuideObject
     from pprint import PrettyPrinter
     p = PrettyPrinter()
+    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
+
 #    get_root()
 
 #    root = VGOCache('https://www.vegguide.org/')
@@ -213,9 +215,8 @@ if __name__ == "__main__":
 
     reviews = get_reviews('http://www.vegguide.org/entry/12190/reviews')
 
-    p.pprint(bar.results)
+#    p.pprint(bar.results)
 
-#    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
 #    print(get_entry_image('http://www.vegguide.org/entry/20647'))
 
 #    print(get_entries('http://www.vegguide.org/region/583'))
