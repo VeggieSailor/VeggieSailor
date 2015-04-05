@@ -199,15 +199,12 @@ Page {
                     source: "image://theme/icon-lock-information"
                 }
                 Label {
-                    //                    font.pixelSize: Theme.fontSizeLarge
                     color: Theme.primaryColor
-                    text: qsTr('Informations')
+                    text: qsTr('Information')
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.right: iconInformations.left
                     anchors.rightMargin: Theme.paddingMedium
                 }
-
-
             }
 
             DetailItem {
@@ -223,12 +220,13 @@ Page {
             DetailItem {
                 label: qsTr('Hours')
                 value: qsTr(page.hours_txt)
-
             }
+
             DetailItem {
                 label: qsTr('Cuisines')
                 value: qsTr(page.cuisines_txt)
             }
+
             DetailItem {
                 label: qsTr('Tags')
                 value: qsTr(page.tags_txt)
@@ -243,6 +241,7 @@ Page {
                     color: Theme.highlightColor
                     opacity : mouseAreaHeaderReviews.pressed ? 0.3 : 0.1
                 }
+
                 Image {
                     id: iconReviews
                     anchors.verticalCenter: parent.verticalCenter
@@ -250,6 +249,7 @@ Page {
                     anchors.rightMargin: Theme.paddingLarge
                     source: "image://theme/icon-m-right"
                 }
+
                 Label {
                     //                    font.pixelSize: Theme.fontSizeLarge
                     color: Theme.primaryColor
