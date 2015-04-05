@@ -35,7 +35,10 @@ def adjust_entry(entry):
     else:
         entry['hours'] = []
     entry['hours_parsed'] = get_hours_dict(entry['hours'])
-    entry['cuisines_txt'] = ', '.join(entry['cuisines'])
+    try:
+        entry['cuisines_txt'] = ', '.join(entry['cuisines'])
+    except KeyError:
+        entry['cuisines_txt'] = ''
     if 'tags' not in entry:
         entry['tags'] = []
     entry['tags_txt'] = ', '.join(entry['tags'])
