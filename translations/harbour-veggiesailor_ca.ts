@@ -149,32 +149,32 @@
         <translation>Telèfon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="204"/>
-        <source>Informations</source>
+        <location filename="../qml/pages/PlaceInfo.qml" line="203"/>
+        <source>Information</source>
         <translation>Informacions</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="214"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="211"/>
         <source>Description</source>
         <translation>Descripció</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="219"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="216"/>
         <source>Price Range</source>
         <translation>Preus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="224"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="221"/>
         <source>Hours</source>
         <translation>Horaris</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="229"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="226"/>
         <source>Cuisines</source>
         <translation>Cuines</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="233"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="231"/>
         <source>Tags</source>
         <translation>Tags</translation>
     </message>

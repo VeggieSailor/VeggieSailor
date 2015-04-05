@@ -136,7 +136,7 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
         <source>Map</source>
-        <translation type="unfinished"/>
+        <translation>Kaart</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="165"/>
@@ -149,39 +149,39 @@
         <translation>Telefoonnummer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="204"/>
-        <source>Informations</source>
-        <translation type="unfinished"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="203"/>
+        <source>Information</source>
+        <translation>Informatie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="214"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="211"/>
         <source>Description</source>
         <translation>Beschrijving</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="219"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="216"/>
         <source>Price Range</source>
         <translation>Prijsklasse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="224"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="221"/>
         <source>Hours</source>
         <translation>Openingstijden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="229"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="226"/>
         <source>Cuisines</source>
         <translation>Keukens</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="233"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="231"/>
         <source>Tags</source>
         <translation>Sleutelwoorden</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="256"/>
         <source>Reviews</source>
-        <translation type="unfinished"/>
+        <translation>Beoordelingen</translation>
     </message>
 </context>
 <context>
