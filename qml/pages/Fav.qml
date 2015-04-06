@@ -96,7 +96,7 @@ Page {
                 x: Theme.paddingLarge
             }
 
-            ListView {
+            Repeater {
                 id: repCities
                 //                quickScroll : false
                 model: ListModel {
@@ -105,15 +105,25 @@ Page {
 
                 property Item contextMenuCities
 
-                delegate: Item {
-                    id: myListItemCities
-                    property bool menuOpen: repCities.contextMenuCities != null && repCities.contextMenuCities.parent === myListItemCities
-                    height: menuOpen ? repCities.contextMenuCities.height + bgdCity.height : bgdCity.height
-                    width: Repeater.view.width
+//                delegate: Item {
+//                    id: myListItemCities
+//                    property bool menuOpen: repCities.contextMenuCities != null && repCities.contextMenuCities.parent === myListItemCities
+////                    height: menuOpen ? repCities.contextMenuCities.height + bgdCity.height : bgdCity.height
+////                    width: Repeater.view.width
 
+//                Item {
+//                    id: myListItemCities
+//                    property bool menuOpen: repCities.contextMenuCities != null && repCities.contextMenuCities.parent === myListItemCities
+//                    height: menuOpen ? repCities.contextMenuCities.height + bgdCity.height : bgdCity.height
+////                    width: Repeater.view.width
+//}
                     BackgroundItem {
                         id: bgdCity
-                        height: Theme.itemSizeSmall
+//                        height: Theme.itemSizeSmall
+                        property bool menuOpen: repCities.contextMenuCities != null && repCities.contextMenuCities.parent === myListItemCities
+
+                        height: menuOpen ? repCities.contextMenuCities.height +  Theme.itemSizeSmall:  Theme.itemSizeSmall
+
                         width: parent.width
                         function openCity(cityUri, cityName) {
                             pageStack.push(Qt.resolvedUrl("Entries.qml"),
@@ -123,7 +133,10 @@ Page {
                                            });
                         }
 
+
+
                         Label {
+                            id: textLabel
                             text: name
                             x: Theme.paddingLarge
                             color: bgdCity.highlighted ? Theme.highlightColor : Theme.primaryColor
@@ -135,28 +148,35 @@ Page {
                             ////                                verticalCenter: parent.verticalCenter
                             //                            }
                         }
+
+                                        Item {
+                                            id: myListItemCities
+                                            property bool menuOpen: repCities.contextMenuCities != null && repCities.contextMenuCities.parent === myListItemCities
+                                            height: menuOpen ? repCities.contextMenuCities.height + bgdCity.height : bgdCity.height
+                                            width: Repeater.view.width
+                        }
+
                         onClicked: openCity(uri, name)
 
                         onPressAndHold: {
                             console.log("HOLD");
-                            if (!contextMenuCities)
-                                contextMenuCities = contextMenuComponentCities.createObject(repCities)
-                            contextMenuCities.show(myListItemCities)
+                            if (!repCities.contextMenuCities)
+                                repCities.contextMenuCities = contextMenuComponentCities.createObject(textLabel)
+                            repCities.contextMenuCities.show(myListItemCities)
                         }
+
+            }
+//                }
+
+            }
+            Component {
+                id: contextMenuComponentCities
+                ContextMenu {
+                    MenuItem {
+                        text: qsTr("Remove from favorites")
+                        onClicked: console.log("Clicked Option 1")
                     }
-                }
-                Component {
-                    id: contextMenuComponentCities
-                    ContextMenu {
-                        MenuItem {
-                            text: "Option 1"
-                            onClicked: console.log("Clicked Option 1")
-                        }
-                        MenuItem {
-                            text: "Option 2"
-                            onClicked: console.log("Clicked Option 2")
-                        }
-                    }
+
                 }
             }
             Python {
