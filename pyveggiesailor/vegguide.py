@@ -53,9 +53,6 @@ class VegGuideProxyRequest(request.Request):
                 }
         return {'type':'error','source_id':-1, 'proxy_uri':None}
 
-
-
-
 class VegGuideParser:
     def __init__(self, vegguide_request):
         req = request.urlopen(vegguide_request)

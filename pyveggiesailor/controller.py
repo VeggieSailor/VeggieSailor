@@ -108,7 +108,7 @@ def check_has_regions(seq):
 def get_root():
     """Get root VegGuide regions data tree.
     """
-    root = VGOCache('https://www.vegguide.org/')
+    root = VGOCache('https://www.vegguide.org/region/0')
     return check_has_regions(root.results['regions']['primary'])
 
 def get_children(uri):

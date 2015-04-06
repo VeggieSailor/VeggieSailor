@@ -40,11 +40,7 @@ Page {
                 width: Theme.paddingLarge * 3
                 source: user_image
                 height: Theme.paddingLarge * 3
-
-
             }
-
-
                 Label {
                     id: label
                     text: user['name']
@@ -64,9 +60,7 @@ Page {
                     }
                     Repeater {
                         id: repeater_rating
-
                         model: rating
-
                         Image
                         {
                             source: "image://theme/icon-m-favorite-selected"
@@ -99,16 +93,9 @@ Page {
                     font.pixelSize: Theme.fontSizeSmall
                     wrapMode: Text.WordWrap
                     width: parent.width - Theme.paddingLarge * 4
-
-
-
                 }
-
-
         }
-
     }
-
     BusyIndicator {
         anchors.centerIn: parent
         size: BusyIndicatorSize.Large
@@ -130,12 +117,6 @@ Page {
             //            console.log(JSON.stringify(data));
             for (var i=0; i<data.length; i++) {
                 listModel.append(data[i]);
-
-
-
-
-
-
             }
             loadingData = false;
         }
