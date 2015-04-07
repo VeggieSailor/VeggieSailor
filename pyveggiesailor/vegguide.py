@@ -41,7 +41,7 @@ class VegGuideProxyRequest(request.Request):
             return {
                 'type':'entry',
                 'source_id':source_id,
-                'proxy_uri':'%s/region/%s' % (VS_BASE_URL, source_id)
+                'proxy_uri':'%s/entry/%s' % (VS_BASE_URL, source_id)
                 }
 
         elif reviews_regexp.match(self.uri):
@@ -128,6 +128,9 @@ class VegGuideObject(object):
         self.uri = uri
         self.vgo_id = uri.replace('https://www.vegguide.org/', '')
         self.parent = parent
+
+
+
 
         if payload_json == None:
             if vegbasket_cache:

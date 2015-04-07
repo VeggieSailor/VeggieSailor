@@ -82,6 +82,7 @@ def get_entry_image(uri):
     try:
         return entry['images'][0]['files'][1]['uri'].replace('https','http')
     except KeyError:
+        # No image in the entry
         return ''
 
 
@@ -200,27 +201,28 @@ if __name__ == "__main__":
     from  vegguide import VegGuideObject
     from pprint import PrettyPrinter
     p = PrettyPrinter()
-    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
+    get_entry_image('http://www.vegguide.org/entry/12190')
+#    p.pprint(get_entry('http://www.vegguide.org/entry/20647'))
 
-#    get_root()
+##    get_root()
 
-#    root = VGOCache('https://www.vegguide.org/')
-#    print(get_root())
-#    europe = VGOCache('https://www.vegguide.org/region/52')
-#    spain2 = VGOCache('https://www.vegguide.org/region/66')
-#    print(get_children('https://www.vegguide.org/region/53'))
-#    print(get_children('https://www.vegguide.org/region/2006'))
-    giblartar = VGOCache('https://www.vegguide.org/region/2236')
+##    root = VGOCache('https://www.vegguide.org/')
+##    print(get_root())
+##    europe = VGOCache('https://www.vegguide.org/region/52')
+##    spain2 = VGOCache('https://www.vegguide.org/region/66')
+##    print(get_children('https://www.vegguide.org/region/53'))
+##    print(get_children('https://www.vegguide.org/region/2006'))
+#    giblartar = VGOCache('https://www.vegguide.org/region/2236')
 
 
-    bcn = VGOCache('http://www.vegguide.org/entry/12190')
-    bar  = VGOCache('https://www.vegguide.org/entry/12300')
+#    bcn = VGOCache('http://www.vegguide.org/entry/12190')
+#    bar  = VGOCache('https://www.vegguide.org/entry/12300')
 
-    reviews = get_reviews('http://www.vegguide.org/entry/12190/reviews')
+#    reviews = get_reviews('http://www.vegguide.org/entry/12190/reviews')
 
 #    p.pprint(bar.results)
 
-#    print(get_entry_image('http://www.vegguide.org/entry/20647'))
+
 
 #    print(get_entries('http://www.vegguide.org/region/583'))
 #    http://www.vegguide.org/entry/20647

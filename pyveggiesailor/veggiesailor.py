@@ -104,7 +104,7 @@ def purge_all_cache():
     except FileNotFoundError:
         init_cache_dir()
 
-if not check_version_stamp(3):
+if not check_version_stamp(4):
     purge_all_cache()
 
 class Cache(object):
