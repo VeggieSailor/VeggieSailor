@@ -3,6 +3,8 @@ import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.3
 import "../VegLevel.js" as VegLevel
 Page {
+    allowedOrientations: Orientation.All
+
     id: page
 
     property string city
