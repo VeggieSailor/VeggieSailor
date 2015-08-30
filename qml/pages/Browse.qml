@@ -4,7 +4,7 @@ import io.thp.pyotherside 1.3
 
 Page {
     id: page
-
+    allowedOrientations: Orientation.All
     property string city
     property string mytext
     property string country
