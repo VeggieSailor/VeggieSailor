@@ -1,6 +1,8 @@
 Veggie Sailor
 -------------
 
+[![Join the chat at https://gitter.im/VeggieSailor/VeggieSailor](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/VeggieSailor/VeggieSailor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Vegetarian sailing for SailfishOS users.
 
 ### Project Website
