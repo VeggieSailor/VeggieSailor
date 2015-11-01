@@ -1,2 +1,6 @@
 *pro.user*
 *.spec.old
+*kdev4
+*__pycache__
+*.pyc
+rpm/harbour-veggiesailor.spec.*

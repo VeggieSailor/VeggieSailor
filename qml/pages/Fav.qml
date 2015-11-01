@@ -3,6 +3,8 @@ import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.3
 
 Page {
+    allowedOrientations: Orientation.All
+
     id: page
     onStatusChanged: {
 
@@ -10,12 +12,19 @@ Page {
         if (page.status==PageStatus.Active)
         {
             placesModel.clear();
+            citiesModel.clear();
 
-    py.call('listmodel.fav_places', [],function(result) {
+
+    py.call('pyveggiesailor.controller.fav_places', [],function(result) {
         for (var i=0; i<result.length; i++) {
             placesModel.append(result[i]);
         }
     });
+            py.call('pyveggiesailor.controller.fav_cities', [],function(result) {
+                for (var i=0; i<result.length; i++) {
+                    citiesModel.append(result[i]);
+                }
+            });
         }
 
     }
@@ -51,11 +60,10 @@ Page {
                     model: ListModel {
                         id: placesModel
                     }
-                    delegate: BackgroundItem {
+                    delegate: EntryBackgroundItem {
                         id: bgdPlace
-                        height: Theme.itemSizeSmall
                         function openPlace(entryUri) {
-                            py.call('listmodel.get_vegguide_entry', [entryUri],function(result) {
+                            py.call('pyveggiesailor.controller.get_entry', [entryUri],function(result) {
                                 pageStack.push(Qt.resolvedUrl("PlaceInfo.qml"),
                               {
                                   "uri":result['uri'],
@@ -70,49 +78,21 @@ Page {
                                   "short_description": result['short_description'],
                                   "hours_txt": result['hours_txt'],
                                   "cuisines_txt": result['cuisines_txt'],
-                                  "tags_txt": result['tags_txt']
+                                  "tags_txt": result['tags_txt'],
+                                   "phone": result['phone'],
+                                    "color_txt": result['color_txt']
+
+
+
 
                               });
                             });
 
                         }
-                        Rectangle {
-                            width: Theme.paddingSmall
-                            radius: Math.round(height/3)
-                            color: color_txt
-                            anchors {
-                                top: parent.top
-                                bottom: parent.bottom
-                                left: parent.left
-                                topMargin: Theme.paddingSmall/2
-                                bottomMargin: Theme.paddingSmall/2
-                                leftMargin: -width/2
-                            }
-                        }
-                        Column {
-                            anchors {
-                                left: parent.left
-                                leftMargin: Theme.paddingLarge
-                                right: parent.right
-                                rightMargin: Theme.paddingSmall
-                                verticalCenter: parent.verticalCenter
-                            }
-                            Label {
-                                text: name
-                                color: highlighted ? Theme.highlightColor : Theme.primaryColor
-                            }
-                            Label {
-                                text: veg_level_description
-                                color: highlighted ? Theme.highlightColor : Theme.secondaryColor
-                                font.pixelSize: Theme.fontSizeSmall
-                            }
-                        }
-
                         onClicked: openPlace(uri)
 
                     }
                 }
-                /* // Commented since model does not work yet
                 Label {
                     text: qsTr("Cities")
                     color: Theme.highlightColor
@@ -124,14 +104,21 @@ Page {
                 Repeater {
                     id: repCities
                     model: ListModel {
-
+                        id: citiesModel
                     }
                     delegate: BackgroundItem {
                         id: bgdCity
                         height: Theme.itemSizeSmall
+                        function openCity(cityUri, cityName) {
+                            pageStack.push(Qt.resolvedUrl("Entries.qml"),
+                                            {
+                                                "uri": cityUri,
+                                                "mytext":name
+                                            });
+                        }
 
                         Label {
-                            text: fruit
+                            text: name
                             x: Theme.paddingLarge
                             color: bgdCity.highlighted ? Theme.highlightColor : Theme.primaryColor
                             anchors {
@@ -142,18 +129,20 @@ Page {
                                 verticalCenter: parent.verticalCenter
                             }
                         }
-                        onClicked: openCity(index)
+                        onClicked: openCity(uri, name)
 
                     }
                 }
-                */
                 Python {
                     id: py
                     Component.onCompleted: {
                         addImportPath(Qt.resolvedUrl('.'));
-                        importModule('listmodel', function(result) {
-                            placesModel.clear();
-                        });
+                        addImportPath(Qt.resolvedUrl('..'));
+                        addImportPath(Qt.resolvedUrl('../..'));
+
+                           importModule('pyveggiesailor.controller', function () {
+                           });
+
                     }
 
 

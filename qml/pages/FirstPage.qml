@@ -3,6 +3,8 @@ import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.3
 
 Page {
+    allowedOrientations: Orientation.All
+
     id: page
     SilicaFlickable {
         anchors.fill: parent
@@ -11,7 +13,7 @@ Page {
             MenuItem {
                 text: qsTr("Clear cache")
                 onClicked: {
-                    py.call('veggiesailor.purge_all_cache',  [], function(result) {});
+                    py.call('pyveggiesailor.veggiesailor.purge_all_cache',  [], function(result) {});
                 }            }
             MenuItem {
                 text: qsTr("Credits")
@@ -29,8 +31,8 @@ Page {
         Python {
             id: py
             Component.onCompleted: {
-                addImportPath(Qt.resolvedUrl('.'));
-                importModule('veggiesailor', function() {});
+                addImportPath(Qt.resolvedUrl('../..'));
+                importModule('pyveggiesailor.veggiesailor', function() {});
             }
         }
         contentHeight: column.height
@@ -83,7 +85,7 @@ Page {
                         x: Theme.paddingLarge
                         MouseArea {
                             anchors.fill: parent
-                            onClicked: pageStack.push(Qt.resolvedUrl("City.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
+                            onClicked: pageStack.push(Qt.resolvedUrl("Entries.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
                         }
                     }
                     Image {
@@ -94,7 +96,7 @@ Page {
                         source: image
                         MouseArea {
                             anchors.fill: parent
-                            onClicked: pageStack.push(Qt.resolvedUrl("City.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
+                            onClicked: pageStack.push(Qt.resolvedUrl("Entries.qml"), {"city":city,"country":country, "mytext":mytext,"uri":uri  })
                         }
                     }
                 }

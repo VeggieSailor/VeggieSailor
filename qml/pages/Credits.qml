@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 
 
 Page {
+    allowedOrientations: Orientation.All
     id: page
     Column {
         id: column
@@ -11,6 +12,17 @@ Page {
         PageHeader {
             title: qsTr("Credits")
         }
+
+        Text {
+            text: qsTr("Veggie Sailor")
+            color: Theme.primaryColor
+
+            font.pixelSize: Theme.fontSizeExtraLarge
+
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+
         Repeater {
             id: repeater
             width: page.width
@@ -29,6 +41,15 @@ Page {
             }
         }
     }
+
+        Text {
+            text: qsTr("If you like the app - please support us, we need developers, translators, content editors and more :)")
+            width: parent.width - (Theme.paddingLarge*2)
+            wrapMode: Text.WordWrap
+            color: Theme.primaryColor
+            x: Theme.paddingLarge
+        }
+
 }
 }
 

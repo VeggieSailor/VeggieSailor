@@ -15,7 +15,7 @@ import json
 
 VERSION_STAMP = 1
 
-APP_NAME = 'veggiesailor'
+APP_NAME = 'harbour-veggiesailor'
 HARBOUR_APP_NAME = APP_NAME
 
 HOME = os.environ['HOME']
@@ -64,6 +64,12 @@ def init_config_dir():
     if not os.path.exists(CONFIG):
         os.makedirs(CONFIG)
 
+def write_version_stamp(stamp=1):
+    filestamp = os.path.join(CONFIG,'timestamp_00')
+    fd = open(filestamp,'w')
+    fd.write(str(stamp))
+    fd.close()
+
 def check_version_stamp(stamp=1):
     """Simply versioning.
 
@@ -73,12 +79,21 @@ def check_version_stamp(stamp=1):
     """
 
     init_config_dir()
-    if not os.path.exists(os.path.join(CONFIG,'timestamp_00')):
-        fd = open(os.path.join(CONFIG,'timestamp_00'),'w')
-        fd.write(str(VERSION_STAMP))
-        fd.close()
+    filestamp = os.path.join(CONFIG,'timestamp_00')
+    if not os.path.exists(filestamp):
+        write_version_stamp(VERSION_STAMP)
         return False
-    return True
+    current = int( open(filestamp).read().strip())
+
+
+    if current >= stamp:
+        return True
+    else:
+        write_version_stamp(stamp)
+        return False
+
+
+
 
 
 def purge_all_cache():
@@ -88,6 +103,9 @@ def purge_all_cache():
         shutil.rmtree(CACHE)
     except FileNotFoundError:
         init_cache_dir()
+
+if not check_version_stamp(4):
+    purge_all_cache()
 
 class Cache(object):
     """Main caching class.
@@ -226,6 +244,8 @@ class StorageFav(Storage):
         self.create_table()
 
 
+
+
 if __name__=="__main__":
     init_cache_dir()
     init_config_dir()
@@ -236,7 +256,7 @@ if __name__=="__main__":
     test_dict = {'a':2, 'b':3}
     test_json = json.dumps(test_dict)
     ch.put(test_json)
-    purge_all_cache()
+    #purge_all_cache()
 
     s = Storage()
     sf = StorageFav()
@@ -251,4 +271,5 @@ if __name__=="__main__":
     from random import randint
     sf.switch('aaa'+str(time.time()), 1, {randint(0,128):randint(0,128)})
 
+    print(CONFIG, DATA, CACHE)
 

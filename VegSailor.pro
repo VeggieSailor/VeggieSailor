@@ -10,35 +10,39 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = VegSailor
+TARGET = harbour-veggiesailor
 
 CONFIG += sailfishapp
 
 SOURCES += src/VegSailor.cpp
 
-OTHER_FILES += qml/VegSailor.qml \
+OTHER_FILES += \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/VegSailor.spec \
-    rpm/VegSailor.yaml \
     translations/*.ts \
-    VegSailor.desktop \
-    qml/pages/listmodel.py \
-    VegSailor.png \
     qml/cover/VegSailor.png \
     qml/pages/images/barcelona.jpg \
     qml/pages/Credits.qml \
     qml/pages/PlaceInfo.qml \
-    qml/pages/vegguide.py \
-    qml/pages/City.qml \
     qml/pages/Browse.qml \
-    qml/pages/veggiesailor.py \
-    qml/pages/veganguide.py \
-    qml/pages/veggiesailor.py \
-    qml/pages/veganguide.py \
-    rpm/VegSailor.changes.in \
-    qml/pages/Fav.qml
+    qml/pages/Fav.qml \
+    rpm/harbour-veggiesailor.spec \
+    rpm/harbour-veggiesailor.changes.in \
+    harbour-veggiesailor.png \
+    harbour-veggiesailor.desktop \
+    qml/harbour-veggiesailor.qml \
+    qml/pages/Entries.qml \
+    pyveggiesailor/__init__.py \
+    rpm/harbour-veggiesailor.legacy \
+    rpm/harbour-veggiesailor.yaml \
+    pyveggiesailor/vegguide_cache.py \
+    qml/pages/EntryMap.qml \
+    qml/pages/EntryBackgroundItem.qml \
+    qml/pages/ChooseMinimumVegLevel.qml \
+    qml/VegLevel.js \
+    qml/pages/Reviews.qml
+
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -48,8 +52,15 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/VegSailor-de.ts
+TRANSLATIONS += translations/harbour-veggiesailor-de.ts
+TRANSLATIONS += translations/harbour-veggiesailor-fr.ts
+TRANSLATIONS += translations/harbour-veggiesailor-es.ts
+
+
 
 RESOURCES += \
     images.qrc
 
+pyveggiesailor.path = /usr/share/$${TARGET}
+pyveggiesailor.files = pyveggiesailor
+INSTALLS += pyveggiesailor

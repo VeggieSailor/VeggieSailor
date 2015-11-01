@@ -4,7 +4,7 @@ import io.thp.pyotherside 1.3
 
 Page {
     id: page
-
+    allowedOrientations: Orientation.All
     property string city
     property string mytext
     property string country
@@ -12,7 +12,7 @@ Page {
     property string entries_uri
     property var children
     property string call_uri
-    call_uri: uri ? uri : "http://www.vegguide.org"
+    call_uri: uri ? uri : "https://www.vegguide.org"
     property string header
     property bool loadingData
 
@@ -57,7 +57,7 @@ Page {
                                         "uri": uri
                                     });
                 } else {
-                    pageStack.push(Qt.resolvedUrl("City.qml"),
+                    pageStack.push(Qt.resolvedUrl("Entries.qml"),
                                     {
                                         "uri": uri,
                                         "mytext":name
@@ -66,6 +66,12 @@ Page {
             }
 
             function isRegion() {
+
+                 if (['United Kingdom'].indexOf(name)>-1)
+                 {
+                     return true;
+                 }
+
                  return has_entries == 0
             }
         }
@@ -80,18 +86,19 @@ Page {
     Python {
         id: py
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('.'));
+            addImportPath(Qt.resolvedUrl('../..'));
             loadingData = true;
-            importModule('listmodel', function () {
-                if (page.uri) {
-                    py.call('listmodel.get_vegguide_children', [page.call_uri], fillListModel);
+            importModule('pyveggiesailor.controller', function () {
+                if (!page.uri) {
+                py.call('pyveggiesailor.controller.get_root', [], fillListModel);
                 } else {
-                    py.call('listmodel.get_vegguide_regions', ['primary',page.call_uri], fillListModel);
+                    py.call('pyveggiesailor.controller.get_children', [page.call_uri], fillListModel);
                 }
-            });
+                })
         }
 
         function fillListModel(data) {
+//            console.log(JSON.stringify(data));
             for (var i=0; i<data.length; i++) {
                 listModel.append(data[i]);
             }
