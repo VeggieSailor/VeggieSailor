@@ -31,21 +31,37 @@
 #ifdef QT_QML_DEBUG
 #include <QtQuick>
 #endif
-
+#include <QDebug>
 #include <sailfishapp.h>
-
-
+#include <QTranslator>
+#include <QGuiApplication>
+#include <QQuickView>
 int main(int argc, char *argv[])
 {
     // SailfishApp::main() will display "qml/template.qml", if you need more
     // control over initialization, you can use:
     //
     //   - SailfishApp::application(int, char *[]) to get the QGuiApplication *
-    //   - SailfishApp::createView() to get a new QQuickView * instance
+    //   - SailfishApp::createView() to ge/*t a new QQuickView * instance
     //   - SailfishApp::pathTo(QString) to get a QUrl to a resource file
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
+  /*  QGuiApplication* app = SailfishApp::application(argc, argv);
+    QString locale = "harbour-veggiesailor_" + QLocale::system().name();
+
+    */
+
+//    QTranslator translator;
+//        qDebug() << "Translation f*/or locale" << Translation for locale "C" ;
+//    translator.load("harbour-veggiesailor_"+locale,SailfishApp::pathTo(QString("translations")).toLocalFile());
+//    translator.load("harbour-veggiesailor_" + QLocale::system().name,
+//                        "/usr/share/harbour-veggiesailor/translations");
+//    app->installTranslator(&translator);
+//    QScopedPointer<QQuickView> view(SailfishApp::createView());
+//     view->setSource(SailfishApp::pathTo("qml/harbour-veggiesailor.qml"));
+//         view->show();*/
     return SailfishApp::main(argc, argv);
+//    return app->exec();
 }
 

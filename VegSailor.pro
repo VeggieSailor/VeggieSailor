@@ -54,7 +54,18 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-veggiesailor-de.ts
 TRANSLATIONS += translations/harbour-veggiesailor-fr.ts
+TRANSLATIONS += translations/harbour-veggiesailor-be.ts
+TRANSLATIONS += translations/harbour-veggiesailor-da.ts
 TRANSLATIONS += translations/harbour-veggiesailor-es.ts
+TRANSLATIONS += translations/harbour-veggiesailor-pl.ts
+TRANSLATIONS += translations/harbour-veggiesailor-pt.ts
+TRANSLATIONS += translations/harbour-veggiesailor-ru.ts
+TRANSLATIONS += translations/harbour-veggiesailor-ca.ts
+TRANSLATIONS += translations/harbour-veggiesailor-sv.ts
+TRANSLATIONS += translations/harbour-veggiesailor-it.ts
+TRANSLATIONS += translations/harbour-veggiesailor-el.ts
+TRANSLATIONS += translations/harbour-veggiesailor-cs.ts
+TRANSLATIONS += translations/harbour-veggiesailor-fi.ts
 
 
 

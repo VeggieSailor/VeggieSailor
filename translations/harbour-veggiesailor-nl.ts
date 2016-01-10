@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="nl" version="2.1">
 <context>
     <name>ChooseMinimumVegLevel</name>
     <message>
-        <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="31"/>
+        <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="30"/>
         <source>Minimum Veggie-Level</source>
-        <translation>Veg-Niveau minimum</translation>
+        <translation>Minimaal vega-type</translation>
     </message>
 </context>
 <context>
@@ -20,19 +18,19 @@
 <context>
     <name>Credits</name>
     <message>
-        <location filename="../qml/pages/Credits.qml" line="13"/>
+        <location filename="../qml/pages/Credits.qml" line="12"/>
         <source>Credits</source>
-        <translation>Crédits</translation>
+        <translation>Bedankt aan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Credits.qml" line="17"/>
+        <location filename="../qml/pages/Credits.qml" line="16"/>
         <source>Veggie Sailor</source>
         <translation>Veggie Sailor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Credits.qml" line="46"/>
+        <location filename="../qml/pages/Credits.qml" line="45"/>
         <source>If you like the app - please support us, we need developers, translators, content editors and more :)</source>
-        <translation>Si vous aimez l&apos;application - n&apos;hésitez à nous soutenir, nous avons besoin de développeurs, traducteurs, éditeurs de contenu et plus :)</translation>
+        <translation>Als u de app waardeert kunt u ons ondersteunen. We hebben ontwikkelaars, vertalers, inhoudbeheerders en nog veel meer nodig :)</translation>
     </message>
 </context>
 <context>
@@ -41,149 +39,149 @@
         <location filename="../qml/pages/Entries.qml" line="23"/>
         <location filename="../qml/pages/Entries.qml" line="35"/>
         <source>Add to favorites</source>
-        <translation>Ajouter aux favoris</translation>
+        <translation>Toevoegen aan favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="31"/>
         <source>Remove from favorites</source>
-        <translation>Retirer des favoris</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="43"/>
         <source>Minimum Veggie-Level</source>
-        <translation>Veg-Niveau minimum</translation>
+        <translation>Minimaal vega-type</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="56"/>
         <source>At least %1</source>
-        <translation>Au moins 1%</translation>
+        <translation>Op zijn minst %1</translation>
     </message>
 </context>
 <context>
     <name>EntryMap</name>
     <message>
-        <location filename="../qml/pages/EntryMap.qml" line="35"/>
+        <location filename="../qml/pages/EntryMap.qml" line="34"/>
         <source>Address</source>
-        <translation>Adresse</translation>
+        <translation>Adres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EntryMap.qml" line="41"/>
+        <location filename="../qml/pages/EntryMap.qml" line="40"/>
         <source>Phone</source>
-        <translation>Téléphone</translation>
+        <translation>Telefoonnummer</translation>
     </message>
 </context>
 <context>
     <name>Fav</name>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="42"/>
+        <location filename="../qml/pages/Fav.qml" line="40"/>
         <source>Favourites</source>
-        <translation>Favoris</translation>
+        <translation>Favorieten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="51"/>
+        <location filename="../qml/pages/Fav.qml" line="49"/>
         <source>Places</source>
-        <translation>Lieux</translation>
+        <translation>Locaties</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Fav.qml" line="97"/>
+        <location filename="../qml/pages/Fav.qml" line="95"/>
         <source>Cities</source>
-        <translation>Villes</translation>
+        <translation>Steden</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="14"/>
+        <location filename="../qml/pages/FirstPage.qml" line="12"/>
         <source>Clear cache</source>
-        <translation>Vider le cache</translation>
+        <translation>Cache wissen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="19"/>
+        <location filename="../qml/pages/FirstPage.qml" line="17"/>
         <source>Credits</source>
-        <translation>Crédits</translation>
+        <translation>Bedankt aan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="23"/>
+        <location filename="../qml/pages/FirstPage.qml" line="21"/>
         <source>Sail</source>
-        <translation>Naviguer</translation>
+        <translation>Zeilen naar...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="27"/>
+        <location filename="../qml/pages/FirstPage.qml" line="25"/>
         <source>Favorites</source>
-        <translation>Favoris</translation>
+        <translation>Favorieten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="45"/>
+        <location filename="../qml/pages/FirstPage.qml" line="43"/>
         <source>Veggie Sailor</source>
         <translation>Veggie Sailor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="106"/>
+        <location filename="../qml/pages/FirstPage.qml" line="104"/>
         <source>Powered by VegGuide.org</source>
-        <translation>Informations fournies par VegGuide.org</translation>
+        <translation>Aangedreven door VegGuide.org</translation>
     </message>
 </context>
 <context>
     <name>PlaceInfo</name>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="44"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="42"/>
         <source>Add to favorites</source>
-        <translation>Ajouter aux favorits</translation>
+        <translation>Toevoegen aan favorieten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="117"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="115"/>
         <source>Veg Level</source>
-        <translation>Niveau Veg</translation>
+        <translation>Vega-type</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="142"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="140"/>
         <source>Map</source>
-        <translation>Carte</translation>
+        <translation>Kaart</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="167"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="165"/>
         <source>Address</source>
-        <translation>Adresse</translation>
+        <translation>Adres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="183"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="181"/>
         <source>Phone</source>
-        <translation>Téléphone</translation>
+        <translation>Telefoonnummer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="205"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="203"/>
         <source>Information</source>
-        <translation>Informations</translation>
+        <translation>Informatie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="213"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="211"/>
         <source>Description</source>
-        <translation>Description</translation>
+        <translation>Beschrijving</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="218"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="216"/>
         <source>Price Range</source>
-        <translation>Gamme de prix</translation>
+        <translation>Prijsklasse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="223"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="221"/>
         <source>Hours</source>
-        <translation>Horaires</translation>
+        <translation>Openingstijden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="228"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="226"/>
         <source>Cuisines</source>
-        <translation>Cuisines</translation>
+        <translation>Keukens</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="233"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="231"/>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>Sleutelwoorden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlaceInfo.qml" line="258"/>
+        <location filename="../qml/pages/PlaceInfo.qml" line="256"/>
         <source>Reviews</source>
-        <translation>Commentaires</translation>
+        <translation>Beoordelingen</translation>
     </message>
 </context>
 <context>
@@ -191,32 +189,32 @@
     <message>
         <location filename="../qml/VegLevel.js" line="3"/>
         <source>Show all</source>
-        <translation>Montrer tout</translation>
+        <translation>Alles weergeven</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="4"/>
         <source>Vegetarian-Friendly</source>
-        <translation>Végétarien</translation>
+        <translation>Geschikt voor vegetariërs</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="5"/>
         <source>Vegan-Friendly</source>
-        <translation>Végétalien</translation>
+        <translation>Geschikt voor veganisten</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="6"/>
         <source>Vegetarian (But Not Vegan-Friendly)</source>
-        <translation>Végétarien (mais non végétalien)</translation>
+        <translation>Vegetarisch (maar niet geschikt voor veganisten)</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="7"/>
         <source>Vegetarian</source>
-        <translation>Végétarien</translation>
+        <translation>Vegetarisch</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="8"/>
         <source>Vegan</source>
-        <translation>Végétalien</translation>
+        <translation>Veganistisch</translation>
     </message>
 </context>
 </TS>

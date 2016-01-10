@@ -1,2 +1,20 @@
 tx pull -a --minimum-perc=90
+
+cp translations/harbour-veggiesailor_be.ts translations/harbour-veggiesailor-be.ts
+cp translations/harbour-veggiesailor_ca.ts translations/harbour-veggiesailor-ca.ts
+cp translations/harbour-veggiesailor_cs.ts translations/harbour-veggiesailor-cs.ts
+cp translations/harbour-veggiesailor_da.ts translations/harbour-veggiesailor-da.ts
+cp translations/harbour-veggiesailor_de.ts translations/harbour-veggiesailor-de.ts
+cp translations/harbour-veggiesailor_el.ts translations/harbour-veggiesailor-el.ts
+cp translations/harbour-veggiesailor_es.ts translations/harbour-veggiesailor-es.ts
+cp translations/harbour-veggiesailor_fi.ts translations/harbour-veggiesailor-fi.ts
+cp translations/harbour-veggiesailor_fr.ts translations/harbour-veggiesailor-fr.ts
+cp translations/harbour-veggiesailor_it.ts translations/harbour-veggiesailor-it.ts
+cp translations/harbour-veggiesailor_nb_NO.ts translations/harbour-veggiesailor-nb_NO.ts
+cp translations/harbour-veggiesailor_nl.ts translations/harbour-veggiesailor-nl.ts
+cp translations/harbour-veggiesailor_pl.ts translations/harbour-veggiesailor-pl.ts
+cp translations/harbour-veggiesailor_pt.ts translations/harbour-veggiesailor-pt.ts
+cp translations/harbour-veggiesailor_ru.ts translations/harbour-veggiesailor-ru.ts
+cp translations/harbour-veggiesailor_sv.ts translations/harbour-veggiesailor-sv.ts
+
 lrelease translations/*.ts

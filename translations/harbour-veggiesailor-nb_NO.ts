@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="be" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="nb_NO" version="2.1">
 <context>
     <name>ChooseMinimumVegLevel</name>
     <message>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../qml/VegLevel.js" line="8"/>
         <source>Vegan</source>
-        <translation>Wegan</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

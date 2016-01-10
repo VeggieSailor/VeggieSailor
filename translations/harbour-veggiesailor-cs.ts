@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<TS version="2.1" language="cs">
 <context>
     <name>ChooseMinimumVegLevel</name>
     <message>
         <location filename="../qml/pages/ChooseMinimumVegLevel.qml" line="31"/>
         <source>Minimum Veggie-Level</source>
-        <translation>Минимальный вегетерианский уровень</translation>
+        <translation>Nejnižší vegetariánská úroveň</translation>
     </message>
 </context>
 <context>
@@ -22,7 +22,7 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="13"/>
         <source>Credits</source>
-        <translation>Авторы программы</translation>
+        <translation>Zásluhy</translation>
     </message>
     <message>
         <location filename="../qml/pages/Credits.qml" line="17"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../qml/pages/Credits.qml" line="46"/>
         <source>If you like the app - please support us, we need developers, translators, content editors and more :)</source>
-        <translation>Если Вам нравится приложение - пожалуйста, поддержите нас, нам нужны разработчики, переводчики, редакторы контента и т.д. :)</translation>
+        <translation>Pokud se vám program líbí, prosím, podpořte nás. Potřebujeme vývojáře, překladatele editory obsahu a další :-)</translation>
     </message>
 </context>
 <context>
@@ -41,22 +41,22 @@
         <location filename="../qml/pages/Entries.qml" line="23"/>
         <location filename="../qml/pages/Entries.qml" line="35"/>
         <source>Add to favorites</source>
-        <translation>Добавить в избранное</translation>
+        <translation>Přidat do oblíbených</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="31"/>
         <source>Remove from favorites</source>
-        <translation>Удалить из избранного</translation>
+        <translation>Odstranit z oblíbených</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="43"/>
         <source>Minimum Veggie-Level</source>
-        <translation>Минимальный вегетерианский уровень</translation>
+        <translation>Nejnižší vegetariánská úroveň</translation>
     </message>
     <message>
         <location filename="../qml/pages/Entries.qml" line="56"/>
         <source>At least %1</source>
-        <translation>По крайней мере %1</translation>
+        <translation>Alespoň %1</translation>
     </message>
 </context>
 <context>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../qml/pages/EntryMap.qml" line="35"/>
         <source>Address</source>
-        <translation>Адреса</translation>
+        <translation>Adresa</translation>
     </message>
     <message>
         <location filename="../qml/pages/EntryMap.qml" line="41"/>
         <source>Phone</source>
-        <translation>Телефон</translation>
+        <translation>Telefon</translation>
     </message>
 </context>
 <context>
@@ -77,17 +77,17 @@
     <message>
         <location filename="../qml/pages/Fav.qml" line="42"/>
         <source>Favourites</source>
-        <translation>Избранное</translation>
+        <translation>Oblíbené</translation>
     </message>
     <message>
         <location filename="../qml/pages/Fav.qml" line="51"/>
         <source>Places</source>
-        <translation>Места</translation>
+        <translation>Místa</translation>
     </message>
     <message>
         <location filename="../qml/pages/Fav.qml" line="97"/>
         <source>Cities</source>
-        <translation>Города</translation>
+        <translation>Města</translation>
     </message>
 </context>
 <context>
@@ -95,22 +95,22 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="14"/>
         <source>Clear cache</source>
-        <translation>Очистить кэш</translation>
+        <translation>Vyprázdnit vyrovnávací paměť</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="19"/>
         <source>Credits</source>
-        <translation>Авторы программы</translation>
+        <translation>Zásluhy</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="23"/>
         <source>Sail</source>
-        <translation>Поплыли</translation>
+        <translation>Plachta</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="27"/>
         <source>Favorites</source>
-        <translation>Избранное</translation>
+        <translation>Oblíbené</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="45"/>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="106"/>
         <source>Powered by VegGuide.org</source>
-        <translation>Powered by VegGuide.org</translation>
+        <translation>Poháněno VegGuide.org</translation>
     </message>
 </context>
 <context>
@@ -128,62 +128,62 @@
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="44"/>
         <source>Add to favorites</source>
-        <translation>Добавить в избранное</translation>
+        <translation>Přidat do oblíbených</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="117"/>
         <source>Veg Level</source>
-        <translation>Вегитарианский уровень</translation>
+        <translation>Vegetariánská úroveň</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="142"/>
         <source>Map</source>
-        <translation>Карта</translation>
+        <translation>Mapa</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="167"/>
         <source>Address</source>
-        <translation>Адреса</translation>
+        <translation>Adresa</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="183"/>
         <source>Phone</source>
-        <translation>Телефон</translation>
+        <translation>Telefon</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="205"/>
         <source>Information</source>
-        <translation>Информация</translation>
+        <translation>Informace</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="213"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Popis</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="218"/>
         <source>Price Range</source>
-        <translation>Ценовой диапазон</translation>
+        <translation>Cenové rozpětí</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="223"/>
         <source>Hours</source>
-        <translation>Часы</translation>
+        <translation>Hodiny</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="228"/>
         <source>Cuisines</source>
-        <translation>Кухни</translation>
+        <translation>Kuchyně</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="233"/>
         <source>Tags</source>
-        <translation>Тэги</translation>
+        <translation>Značky</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaceInfo.qml" line="258"/>
         <source>Reviews</source>
-        <translation>Отзывы</translation>
+        <translation>Posudky</translation>
     </message>
 </context>
 <context>
@@ -191,32 +191,32 @@
     <message>
         <location filename="../qml/VegLevel.js" line="3"/>
         <source>Show all</source>
-        <translation>Показать все</translation>
+        <translation>Ukázat vše</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="4"/>
         <source>Vegetarian-Friendly</source>
-        <translation>Вегетариански-дружественный</translation>
+        <translation>Přátelská k vegetariánům</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="5"/>
         <source>Vegan-Friendly</source>
-        <translation>Вегански-дружественный</translation>
+        <translation>Přátelská k veganům</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="6"/>
         <source>Vegetarian (But Not Vegan-Friendly)</source>
-        <translation>Вегетарианский (но не вегански-дружественный)</translation>
+        <translation>Vegetariánská (ale ne přátelská k veganům)</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="7"/>
         <source>Vegetarian</source>
-        <translation>Вегетарианский</translation>
+        <translation>Vegetariánská</translation>
     </message>
     <message>
         <location filename="../qml/VegLevel.js" line="8"/>
         <source>Vegan</source>
-        <translation>Веганский</translation>
+        <translation>Veganská</translation>
     </message>
 </context>
 </TS>
