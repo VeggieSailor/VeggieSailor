@@ -1,4 +1,4 @@
 Veggie Sailor
 -------------
 
-Vegan friendly application for Sailfish OS
+Vegan friendly App for Sailfish OS
